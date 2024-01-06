@@ -8,5 +8,6 @@ namespace AvangersDietApp.DAL.Concrate
 {
     public class FoodStrategy
     {
+
     }
 }
