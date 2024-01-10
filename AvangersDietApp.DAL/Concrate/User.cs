@@ -13,7 +13,8 @@ namespace AvangersDietApp.DAL.Concrate
         public string LastName { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
-        public Cinsiyet Cinsiyet { get; set; }
+        public int Weight { get; set; }
+        public Gender Gender { get; set; }
                               
     }
 }

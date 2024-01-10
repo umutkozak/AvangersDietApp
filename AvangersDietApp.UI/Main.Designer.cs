@@ -67,7 +67,7 @@
             btn_Uye.TabIndex = 1;
             btn_Uye.Text = "Üye Girişi";
             btn_Uye.UseVisualStyleBackColor = true;
- 
+            btn_Uye.Click += btn_Uye_Click;
             // 
             // Btn_UyeOl
             // 
@@ -78,6 +78,7 @@
             Btn_UyeOl.TabIndex = 2;
             Btn_UyeOl.Text = "Üye Ol";
             Btn_UyeOl.UseVisualStyleBackColor = true;
+            Btn_UyeOl.Click += Btn_UyeOl_Click;
             // 
             // txt_Admin
             // 

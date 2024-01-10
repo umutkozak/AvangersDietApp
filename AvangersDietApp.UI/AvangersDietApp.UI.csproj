@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AvangersDietApp.BLL\AvangersDietApp.BLL.csproj" />
     <ProjectReference Include="..\AvangersDietApp.DAL\AvangersDietApp.DAL.csproj" />
   </ItemGroup>
 

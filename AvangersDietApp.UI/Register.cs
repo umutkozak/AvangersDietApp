@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AvangersDietApp.BLL.Concrate;
+using AvangersDietApp.DAL.Concrate;
+using AvangersDietApp.DAL.Contract;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AvangersDietApp.UI
 {
@@ -15,6 +19,52 @@ namespace AvangersDietApp.UI
         public Register()
         {
             InitializeComponent();
+        }
+
+        private void btn_KayitOl_Click(object sender, EventArgs e)
+        {
+            if (CheckControls()||ChekPassword())
+            {
+                MessageBox.Show("Hatasız Doldurunuz");
+                return;
+            }
+            User user =new User();
+            user.Name=txt_FirstName.Text;
+            user.LastName=txt_LastName.Text;
+            user.UserName=txt_Username.Text;
+            user.Gender = (Gender)cmb_Gender.SelectedValue;
+            user.Password=msk_Pwd.Text;
+            user.Weight=Convert.ToInt32(numeric_Weight.Value);
+
+            UserManager userManager = new UserManager();
+            userManager.Add(user);
+        }
+
+        bool CheckControls() 
+        {
+            foreach (Control item in this.Controls)
+            {
+                if (item is System.Windows.Forms.TextBox)
+                {
+                    if (string.IsNullOrWhiteSpace(item.Text))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        bool ChekPassword()
+        {
+            if (msk_Pwd.Text==msk_PwdAgain.Text)
+            {
+                return false;
+            }
+            return true;
+        }
+        private void Register_Load(object sender, EventArgs e)
+        {
+            cmb_Gender.DataSource = Enum.GetValues(typeof(Gender));
         }
     }
 }
