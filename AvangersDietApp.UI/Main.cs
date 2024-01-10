@@ -1,4 +1,5 @@
 using AvangersDietApp.DAL.Concrate;
+using AvangersDietApp.DAL.Context;
 
 namespace AvangersDietApp.UI
 {
@@ -9,46 +10,53 @@ namespace AvangersDietApp.UI
             InitializeComponent();
         }
 
+        AvangersContext context=new AvangersContext();
         private void btn_Yonetici_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
+            
+            Admin admin = context.Admin.FirstOrDefault(a => a.AdminName == txt_Admin.Text && a.Password==msk_AdminPass.Text);
 
-            admin.AdminName=txt_Admin.Text;
-            admin.Password=msk_AdminPass.Text;
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txt_Admin.Text)||string.IsNullOrWhiteSpace(msk_AdminPass.Text))
+                {
+                    MessageBox.Show("Lütfen yönetici adý ve þifrenizi giriniz.");
+                    txt_Admin.Text = "";
+                    msk_AdminPass.Text = "";
+                }
+                else if (admin.AdminName!=txt_Admin.Text)
+                {
+                    MessageBox.Show("Yönetici adýnýz hatalý! Lütfen tekrar giriniz.");
+                    txt_Admin.Text = "";
+                    msk_AdminPass.Text = "";
+                }
+                else if (admin.Password!= msk_AdminPass.Text)
+                {
+                    MessageBox.Show("Þifreniz hatalý! Lütfen tekrar giriniz.");
+                    txt_Admin.Text = "";
+                    msk_AdminPass.Text = "";
+                }
+                else
+                {
 
-            if (string.IsNullOrWhiteSpace(txt_Admin.Text)||string.IsNullOrWhiteSpace(msk_AdminPass.Text))
-            {
-                MessageBox.Show("Lütfen yönetici adý ve þifrenizi giriniz.");
-                txt_Admin.Text = "";
-                msk_AdminPass.Text = "";
+                    AdminOperations adminOperations = new AdminOperations();
+                    adminOperations.Show();
+                    this.Hide();
+                }
             }
-            else if (admin.AdminName!=txt_Admin.Text)
+            catch (Exception ex)
             {
-                MessageBox.Show("Yönetici adýnýz hatalý! Lütfen tekrar giriniz.");
-                txt_Admin.Text = "";
-                msk_AdminPass.Text = "";
-            }
-            else if (admin.Password!= msk_AdminPass.Text)
-            {
-                MessageBox.Show("Þifreniz hatalý! Lütfen tekrar giriniz.");
-                txt_Admin.Text = "";
-                msk_AdminPass.Text = "";
-            }
-            else
-            {
-                AdminOperations adminOperations = new AdminOperations();
-                adminOperations.Show();
-                this.Hide();
+
+                MessageBox.Show("Hatalý Giriþ Denemesi");
             }
 
         }
 
         private void btn_Uye_Click(object sender, EventArgs e)
         {
-            User user = new User();
+            User user = context.Users.FirstOrDefault(a => a.UserName == txt_User.Text && a.Password==msk_UserPass.Text);
 
-            user.UserName=txt_User.Text;
-            user.Password=msk_UserPass.Text;
+           
 
             if (string.IsNullOrWhiteSpace(txt_User.Text)||string.IsNullOrWhiteSpace(msk_UserPass.Text))
             {
