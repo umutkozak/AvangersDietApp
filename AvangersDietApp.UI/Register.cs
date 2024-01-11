@@ -23,6 +23,7 @@ namespace AvangersDietApp.UI
 
         private void btn_KayitOl_Click(object sender, EventArgs e)
         {
+            UserManager userManager = new UserManager();
             if (CheckControls()||ChekPassword())
             {
                 MessageBox.Show("Hatasız Doldurunuz");
@@ -36,8 +37,19 @@ namespace AvangersDietApp.UI
             user.Password=msk_Pwd.Text;
             user.Weight=Convert.ToInt32(numeric_Weight.Value);
 
-            UserManager userManager = new UserManager();
-            userManager.Add(user);
+
+            var UserList = userManager.GetAll();
+            if (!UserList.Any(k => k.UserName == user.UserName))
+            {
+                userManager.Add(user);
+                MessageBox.Show("Kayıt İşlemi Başarılı");
+            }
+            else
+            {
+                MessageBox.Show("Aynı İsimde Kullanıcı Var İşlem Başarısız...");
+            }
+            
+            
         }
 
         bool CheckControls() 

@@ -14,10 +14,9 @@ namespace AvangersDietApp.UI
         private void btn_Yonetici_Click(object sender, EventArgs e)
         {
             
-            Admin admin = context.Admin.FirstOrDefault(a => a.AdminName == txt_Admin.Text && a.Password==msk_AdminPass.Text);
+            Admin admin = context.Admin.FirstOrDefault();
 
-            try
-            {
+           
                 if (string.IsNullOrWhiteSpace(txt_Admin.Text)||string.IsNullOrWhiteSpace(msk_AdminPass.Text))
                 {
                     MessageBox.Show("Lütfen yönetici adý ve þifrenizi giriniz.");
@@ -43,12 +42,8 @@ namespace AvangersDietApp.UI
                     adminOperations.Show();
                     this.Hide();
                 }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Hatalý Giriþ Denemesi");
-            }
+            
+           
 
         }
 
@@ -64,9 +59,15 @@ namespace AvangersDietApp.UI
                 txt_User.Text= "";
                 msk_UserPass.Text = "";
             }
+            else if (user == null)
+            {
+                MessageBox.Show("Kullanýcý bulunamadý");
+                txt_Admin.Text = "";
+                msk_AdminPass.Text = "";
+            }
             else if (user.UserName!=txt_User.Text)
             {
-                MessageBox.Show("Yönetici adýnýz hatalý! Lütfen tekrar giriniz.");
+                MessageBox.Show("Kullanýcý adýnýz hatalý! Lütfen tekrar giriniz.");
                 txt_User.Text = "";
                 msk_UserPass.Text = "";
             }
