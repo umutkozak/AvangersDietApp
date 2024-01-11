@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace AvangersDietApp.UI
 {
-    public partial class AdminOperations : Form
+    public partial class FoodDelUpdateOperations : Form
     {
-        public AdminOperations()
+        public FoodDelUpdateOperations()
         {
             InitializeComponent();
-        }
-
-        private void btnFoodDelUpd_Click(object sender, EventArgs e)
-        {
-            FoodDelUpdateOperations fdo=new FoodDelUpdateOperations();
-            fdo.Show();
-            this.Close();
         }
     }
 }
