@@ -29,36 +29,36 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btn_FoodAdd = new Button();
+            nmr_Calories = new NumericUpDown();
+            nmr_Protein = new NumericUpDown();
+            nmr_Fat = new NumericUpDown();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            nmr_Carbonhid = new NumericUpDown();
+            rch_FoodDesc = new RichTextBox();
+            cmbCategoryId = new ComboBox();
+            Txt_FoodName = new TextBox();
             textBox1 = new TextBox();
             groupBox2 = new GroupBox();
-            label1 = new Label();
-            btn_CategoryAdd = new Button();
-            dataGridView1 = new DataGridView();
-            btn_CategoryDel = new Button();
             btn_CategoryUpd = new Button();
-            Txt_FoodName = new TextBox();
-            cmbCategoryId = new ComboBox();
-            rch_FoodDesc = new RichTextBox();
-            nmr_Fat = new NumericUpDown();
-            nmr_Carbonhid = new NumericUpDown();
-            nmr_Protein = new NumericUpDown();
-            nmr_Calories = new NumericUpDown();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            btn_FoodAdd = new Button();
+            btn_CategoryDel = new Button();
+            btn_CategoryAdd = new Button();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
             btnFoodDelUpd = new Button();
             groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nmr_Calories).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nmr_Protein).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nmr_Fat).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nmr_Carbonhid).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nmr_Protein).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nmr_Calories).BeginInit();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -78,18 +78,153 @@
             groupBox1.Controls.Add(rch_FoodDesc);
             groupBox1.Controls.Add(cmbCategoryId);
             groupBox1.Controls.Add(Txt_FoodName);
-            groupBox1.Location = new Point(327, 12);
+            groupBox1.Location = new Point(286, 9);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(596, 370);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(522, 278);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Yemek Ekleme";
             // 
+            // btn_FoodAdd
+            // 
+            btn_FoodAdd.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btn_FoodAdd.Location = new Point(236, 240);
+            btn_FoodAdd.Margin = new Padding(3, 2, 3, 2);
+            btn_FoodAdd.Name = "btn_FoodAdd";
+            btn_FoodAdd.Size = new Size(214, 33);
+            btn_FoodAdd.TabIndex = 6;
+            btn_FoodAdd.Text = "Yemek Ekle";
+            btn_FoodAdd.UseVisualStyleBackColor = true;
+            // 
+            // nmr_Calories
+            // 
+            nmr_Calories.Location = new Point(236, 215);
+            nmr_Calories.Margin = new Padding(3, 2, 3, 2);
+            nmr_Calories.Name = "nmr_Calories";
+            nmr_Calories.Size = new Size(131, 23);
+            nmr_Calories.TabIndex = 4;
+            // 
+            // nmr_Protein
+            // 
+            nmr_Protein.Location = new Point(236, 190);
+            nmr_Protein.Margin = new Padding(3, 2, 3, 2);
+            nmr_Protein.Name = "nmr_Protein";
+            nmr_Protein.Size = new Size(131, 23);
+            nmr_Protein.TabIndex = 4;
+            // 
+            // nmr_Fat
+            // 
+            nmr_Fat.Location = new Point(236, 164);
+            nmr_Fat.Margin = new Padding(3, 2, 3, 2);
+            nmr_Fat.Name = "nmr_Fat";
+            nmr_Fat.Size = new Size(131, 23);
+            nmr_Fat.TabIndex = 4;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(175, 217);
+            label8.Name = "label8";
+            label8.Size = new Size(43, 15);
+            label8.TabIndex = 1;
+            label8.Text = "Kalori :";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(168, 190);
+            label7.Name = "label7";
+            label7.Size = new Size(51, 15);
+            label7.TabIndex = 1;
+            label7.Text = "Protein :";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(188, 164);
+            label6.Name = "label6";
+            label6.Size = new Size(32, 15);
+            label6.TabIndex = 1;
+            label6.Text = "Yağ :";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(136, 134);
+            label5.Name = "label5";
+            label5.Size = new Size(82, 15);
+            label5.TabIndex = 1;
+            label5.Text = "Karbonhidrat :";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(136, 72);
+            label4.Name = "label4";
+            label4.Size = new Size(70, 15);
+            label4.TabIndex = 1;
+            label4.Text = "Açıklaması :";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(142, 46);
+            label3.Name = "label3";
+            label3.Size = new Size(65, 15);
+            label3.TabIndex = 1;
+            label3.Text = "Kategorisi :";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(180, 25);
+            label2.Name = "label2";
+            label2.Size = new Size(31, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Adı :";
+            // 
+            // nmr_Carbonhid
+            // 
+            nmr_Carbonhid.Location = new Point(236, 133);
+            nmr_Carbonhid.Margin = new Padding(3, 2, 3, 2);
+            nmr_Carbonhid.Name = "nmr_Carbonhid";
+            nmr_Carbonhid.Size = new Size(131, 23);
+            nmr_Carbonhid.TabIndex = 5;
+            // 
+            // rch_FoodDesc
+            // 
+            rch_FoodDesc.Location = new Point(236, 70);
+            rch_FoodDesc.Margin = new Padding(3, 2, 3, 2);
+            rch_FoodDesc.Name = "rch_FoodDesc";
+            rch_FoodDesc.Size = new Size(214, 59);
+            rch_FoodDesc.TabIndex = 5;
+            rch_FoodDesc.Text = "";
+            // 
+            // cmbCategoryId
+            // 
+            cmbCategoryId.FormattingEnabled = true;
+            cmbCategoryId.Location = new Point(236, 44);
+            cmbCategoryId.Margin = new Padding(3, 2, 3, 2);
+            cmbCategoryId.Name = "cmbCategoryId";
+            cmbCategoryId.Size = new Size(214, 23);
+            cmbCategoryId.TabIndex = 4;
+            // 
+            // Txt_FoodName
+            // 
+            Txt_FoodName.Location = new Point(236, 20);
+            Txt_FoodName.Margin = new Padding(3, 2, 3, 2);
+            Txt_FoodName.Name = "Txt_FoodName";
+            Txt_FoodName.Size = new Size(214, 23);
+            Txt_FoodName.TabIndex = 3;
+            // 
             // textBox1
             // 
-            textBox1.Location = new Point(0, 76);
+            textBox1.Location = new Point(0, 57);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(269, 27);
+            textBox1.Size = new Size(236, 23);
             textBox1.TabIndex = 0;
             // 
             // groupBox2
@@ -99,191 +234,75 @@
             groupBox2.Controls.Add(btn_CategoryAdd);
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(textBox1);
-            groupBox2.Location = new Point(12, 21);
+            groupBox2.Location = new Point(10, 16);
+            groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(300, 239);
+            groupBox2.Padding = new Padding(3, 2, 3, 2);
+            groupBox2.Size = new Size(262, 179);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Kategori Ekleme";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 42);
-            label1.Name = "label1";
-            label1.Size = new Size(100, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Kategori Adı :";
-            // 
-            // btn_CategoryAdd
-            // 
-            btn_CategoryAdd.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btn_CategoryAdd.Location = new Point(0, 109);
-            btn_CategoryAdd.Name = "btn_CategoryAdd";
-            btn_CategoryAdd.Size = new Size(269, 40);
-            btn_CategoryAdd.TabIndex = 2;
-            btn_CategoryAdd.Text = "Kategori Ekle";
-            btn_CategoryAdd.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 266);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(300, 188);
-            dataGridView1.TabIndex = 3;
-            // 
-            // btn_CategoryDel
-            // 
-            btn_CategoryDel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btn_CategoryDel.Location = new Point(0, 155);
-            btn_CategoryDel.Name = "btn_CategoryDel";
-            btn_CategoryDel.Size = new Size(269, 40);
-            btn_CategoryDel.TabIndex = 2;
-            btn_CategoryDel.Text = "Kategori Sil";
-            btn_CategoryDel.UseVisualStyleBackColor = true;
-            // 
             // btn_CategoryUpd
             // 
             btn_CategoryUpd.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btn_CategoryUpd.Location = new Point(0, 199);
+            btn_CategoryUpd.Location = new Point(0, 149);
+            btn_CategoryUpd.Margin = new Padding(3, 2, 3, 2);
             btn_CategoryUpd.Name = "btn_CategoryUpd";
-            btn_CategoryUpd.Size = new Size(269, 40);
+            btn_CategoryUpd.Size = new Size(235, 30);
             btn_CategoryUpd.TabIndex = 2;
             btn_CategoryUpd.Text = "Kategori Güncelle";
             btn_CategoryUpd.UseVisualStyleBackColor = true;
             // 
-            // Txt_FoodName
+            // btn_CategoryDel
             // 
-            Txt_FoodName.Location = new Point(270, 26);
-            Txt_FoodName.Name = "Txt_FoodName";
-            Txt_FoodName.Size = new Size(244, 27);
-            Txt_FoodName.TabIndex = 3;
+            btn_CategoryDel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btn_CategoryDel.Location = new Point(0, 116);
+            btn_CategoryDel.Margin = new Padding(3, 2, 3, 2);
+            btn_CategoryDel.Name = "btn_CategoryDel";
+            btn_CategoryDel.Size = new Size(235, 30);
+            btn_CategoryDel.TabIndex = 2;
+            btn_CategoryDel.Text = "Kategori Sil";
+            btn_CategoryDel.UseVisualStyleBackColor = true;
             // 
-            // cmbCategoryId
+            // btn_CategoryAdd
             // 
-            cmbCategoryId.FormattingEnabled = true;
-            cmbCategoryId.Location = new Point(270, 59);
-            cmbCategoryId.Name = "cmbCategoryId";
-            cmbCategoryId.Size = new Size(244, 28);
-            cmbCategoryId.TabIndex = 4;
+            btn_CategoryAdd.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btn_CategoryAdd.Location = new Point(0, 82);
+            btn_CategoryAdd.Margin = new Padding(3, 2, 3, 2);
+            btn_CategoryAdd.Name = "btn_CategoryAdd";
+            btn_CategoryAdd.Size = new Size(235, 30);
+            btn_CategoryAdd.TabIndex = 2;
+            btn_CategoryAdd.Text = "Kategori Ekle";
+            btn_CategoryAdd.UseVisualStyleBackColor = true;
+            btn_CategoryAdd.Click += btn_CategoryAdd_Click;
             // 
-            // rch_FoodDesc
+            // label1
             // 
-            rch_FoodDesc.Location = new Point(270, 93);
-            rch_FoodDesc.Name = "rch_FoodDesc";
-            rch_FoodDesc.Size = new Size(244, 77);
-            rch_FoodDesc.TabIndex = 5;
-            rch_FoodDesc.Text = "";
+            label1.AutoSize = true;
+            label1.Location = new Point(5, 32);
+            label1.Name = "label1";
+            label1.Size = new Size(78, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Kategori Adı :";
             // 
-            // nmr_Fat
+            // dataGridView1
             // 
-            nmr_Fat.Location = new Point(270, 218);
-            nmr_Fat.Name = "nmr_Fat";
-            nmr_Fat.Size = new Size(150, 27);
-            nmr_Fat.TabIndex = 4;
-            // 
-            // nmr_Carbonhid
-            // 
-            nmr_Carbonhid.Location = new Point(270, 177);
-            nmr_Carbonhid.Name = "nmr_Carbonhid";
-            nmr_Carbonhid.Size = new Size(150, 27);
-            nmr_Carbonhid.TabIndex = 5;
-            // 
-            // nmr_Protein
-            // 
-            nmr_Protein.Location = new Point(270, 254);
-            nmr_Protein.Name = "nmr_Protein";
-            nmr_Protein.Size = new Size(150, 27);
-            nmr_Protein.TabIndex = 4;
-            // 
-            // nmr_Calories
-            // 
-            nmr_Calories.Location = new Point(270, 287);
-            nmr_Calories.Name = "nmr_Calories";
-            nmr_Calories.Size = new Size(150, 27);
-            nmr_Calories.TabIndex = 4;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(206, 33);
-            label2.Name = "label2";
-            label2.Size = new Size(39, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Adı :";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(162, 62);
-            label3.Name = "label3";
-            label3.Size = new Size(83, 20);
-            label3.TabIndex = 1;
-            label3.Text = "Kategorisi :";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(155, 96);
-            label4.Name = "label4";
-            label4.Size = new Size(87, 20);
-            label4.TabIndex = 1;
-            label4.Text = "Açıklaması :";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(155, 179);
-            label5.Name = "label5";
-            label5.Size = new Size(103, 20);
-            label5.TabIndex = 1;
-            label5.Text = "Karbonhidrat :";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(215, 218);
-            label6.Name = "label6";
-            label6.Size = new Size(40, 20);
-            label6.TabIndex = 1;
-            label6.Text = "Yağ :";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(192, 254);
-            label7.Name = "label7";
-            label7.Size = new Size(63, 20);
-            label7.TabIndex = 1;
-            label7.Text = "Protein :";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(200, 289);
-            label8.Name = "label8";
-            label8.Size = new Size(55, 20);
-            label8.TabIndex = 1;
-            label8.Text = "Kalori :";
-            // 
-            // btn_FoodAdd
-            // 
-            btn_FoodAdd.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btn_FoodAdd.Location = new Point(270, 320);
-            btn_FoodAdd.Name = "btn_FoodAdd";
-            btn_FoodAdd.Size = new Size(244, 44);
-            btn_FoodAdd.TabIndex = 6;
-            btn_FoodAdd.Text = "Yemek Ekle";
-            btn_FoodAdd.UseVisualStyleBackColor = true;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(10, 200);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(262, 141);
+            dataGridView1.TabIndex = 3;
             // 
             // btnFoodDelUpd
             // 
             btnFoodDelUpd.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btnFoodDelUpd.Location = new Point(390, 397);
+            btnFoodDelUpd.Location = new Point(341, 298);
+            btnFoodDelUpd.Margin = new Padding(3, 2, 3, 2);
             btnFoodDelUpd.Name = "btnFoodDelUpd";
-            btnFoodDelUpd.Size = new Size(438, 57);
+            btnFoodDelUpd.Size = new Size(383, 43);
             btnFoodDelUpd.TabIndex = 4;
             btnFoodDelUpd.Text = "Silmek Veya Güncellemek İçin Tıklayınız...";
             btnFoodDelUpd.UseVisualStyleBackColor = true;
@@ -291,24 +310,25 @@
             // 
             // AdminOperations
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(935, 466);
+            ClientSize = new Size(818, 350);
             Controls.Add(btnFoodDelUpd);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AdminOperations";
             Text = "AdminOperations";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nmr_Calories).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nmr_Protein).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nmr_Fat).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nmr_Carbonhid).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nmr_Fat).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nmr_Carbonhid).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nmr_Protein).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nmr_Calories).EndInit();
             ResumeLayout(false);
         }
 
