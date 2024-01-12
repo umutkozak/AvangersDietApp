@@ -18,9 +18,15 @@ namespace AvangersDietApp.DAL.SeedData
             builder.HasData(
                 new Category() { Id = 1, Name = "Et" },
                 new Category() { Id = 2, Name = "Meyve"},
-                new Category() { Id = 3, Name = "Sebze" },
+                new Category() { Id = 3, Name = "Sebze ve Bakliyat" },
                 new Category() { Id = 4, Name = "Atıştırmalık" },
-                new Category() { Id = 5, Name = "Süt Ürünleri" }
+                new Category() { Id = 5, Name = "Süt Ürünleri" },
+                new Category() { Id = 6, Name = "Diğer Ürünler" },
+                new Category() { Id = 7, Name = "Unlu Ürünler" },
+                new Category() { Id = 8, Name = "Tatlılar" },
+                new Category() { Id = 9, Name = "Çerez ve Kuru Yemiş" }
+
+
 
                 );
         }
