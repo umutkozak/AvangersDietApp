@@ -19,9 +19,14 @@ namespace AvangersDietApp.UI
 
         private void btnFoodDelUpd_Click(object sender, EventArgs e)
         {
-            FoodDelUpdateOperations fdo=new FoodDelUpdateOperations();
+            FoodDelUpdateOperations fdo = new FoodDelUpdateOperations();
             fdo.Show();
             this.Close();
+        }
+
+        private void btn_CategoryAdd_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -17,5 +17,6 @@ namespace AvangersDietApp.DAL.Concrate
         public double Fats { get; set; }
         public double Calories { get; set; }
 
+
     }
 }
