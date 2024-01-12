@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AvangersDietApp.UI
 {
-    public partial class AddFood : Form
+    public partial class FoodDairy : Form
     {
-        public AddFood()
+        public FoodDairy()
         {
             InitializeComponent();
         }
