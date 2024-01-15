@@ -33,20 +33,20 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
+            cmb_Category = new ComboBox();
+            cmb_Foods = new ComboBox();
+            cmb_Portion = new ComboBox();
             label6 = new Label();
-            comboBox4 = new ComboBox();
+            cmb_Daily = new ComboBox();
             dateTimePicker1 = new DateTimePicker();
-            dataGridView1 = new DataGridView();
+            dgv_Choosed = new DataGridView();
             label7 = new Label();
-            btn_Ekle = new Button();
-            btnKaydet = new Button();
-            btnSil = new Button();
-            numericUpDown1 = new NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            btn_Add = new Button();
+            btn_Save = new Button();
+            btn_Clear = new Button();
+            nud_Count = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)dgv_Choosed).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nud_Count).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -99,32 +99,34 @@
             label5.TabIndex = 0;
             label5.Text = "Adet";
             // 
-            // comboBox1
+            // cmb_Category
             // 
-            comboBox1.Font = new Font("Verdana", 12F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(185, 186);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(213, 26);
-            comboBox1.TabIndex = 1;
+            cmb_Category.Font = new Font("Verdana", 12F);
+            cmb_Category.FormattingEnabled = true;
+            cmb_Category.Location = new Point(185, 186);
+            cmb_Category.Name = "cmb_Category";
+            cmb_Category.Size = new Size(213, 26);
+            cmb_Category.TabIndex = 1;
+            cmb_Category.SelectedIndexChanged += cmb_Category_SelectedIndexChanged;
             // 
-            // comboBox2
+            // cmb_Foods
             // 
-            comboBox2.Font = new Font("Verdana", 12F);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(185, 237);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(213, 26);
-            comboBox2.TabIndex = 1;
+            cmb_Foods.Font = new Font("Verdana", 12F);
+            cmb_Foods.FormattingEnabled = true;
+            cmb_Foods.Location = new Point(185, 237);
+            cmb_Foods.Name = "cmb_Foods";
+            cmb_Foods.Size = new Size(213, 26);
+            cmb_Foods.TabIndex = 1;
+            cmb_Foods.SelectedIndexChanged += cmb_Foods_SelectedIndexChanged;
             // 
-            // comboBox3
+            // cmb_Portion
             // 
-            comboBox3.Font = new Font("Verdana", 12F);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(185, 292);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(213, 26);
-            comboBox3.TabIndex = 1;
+            cmb_Portion.Font = new Font("Verdana", 12F);
+            cmb_Portion.FormattingEnabled = true;
+            cmb_Portion.Location = new Point(185, 292);
+            cmb_Portion.Name = "cmb_Portion";
+            cmb_Portion.Size = new Size(213, 26);
+            cmb_Portion.TabIndex = 1;
             // 
             // label6
             // 
@@ -136,14 +138,14 @@
             label6.TabIndex = 0;
             label6.Text = "Tarih";
             // 
-            // comboBox4
+            // cmb_Daily
             // 
-            comboBox4.Font = new Font("Verdana", 12F);
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(185, 135);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(213, 26);
-            comboBox4.TabIndex = 1;
+            cmb_Daily.Font = new Font("Verdana", 12F);
+            cmb_Daily.FormattingEnabled = true;
+            cmb_Daily.Location = new Point(185, 135);
+            cmb_Daily.Name = "cmb_Daily";
+            cmb_Daily.Size = new Size(213, 26);
+            cmb_Daily.TabIndex = 1;
             // 
             // dateTimePicker1
             // 
@@ -153,73 +155,79 @@
             dateTimePicker1.Size = new Size(266, 27);
             dateTimePicker1.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgv_Choosed
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(476, 186);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(251, 170);
-            dataGridView1.TabIndex = 3;
+            dgv_Choosed.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Choosed.Location = new Point(476, 156);
+            dgv_Choosed.Name = "dgv_Choosed";
+            dgv_Choosed.Size = new Size(251, 200);
+            dgv_Choosed.TabIndex = 3;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(476, 159);
+            label7.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            label7.Location = new Point(476, 135);
             label7.Name = "label7";
-            label7.Size = new Size(57, 15);
+            label7.Size = new Size(87, 18);
             label7.TabIndex = 4;
             label7.Text = "Seçilenler";
             // 
-            // btn_Ekle
+            // btn_Add
             // 
-            btn_Ekle.Location = new Point(185, 390);
-            btn_Ekle.Name = "btn_Ekle";
-            btn_Ekle.Size = new Size(75, 23);
-            btn_Ekle.TabIndex = 5;
-            btn_Ekle.Text = "Ekle";
-            btn_Ekle.UseVisualStyleBackColor = true;
+            btn_Add.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            btn_Add.Location = new Point(197, 390);
+            btn_Add.Name = "btn_Add";
+            btn_Add.Size = new Size(179, 35);
+            btn_Add.TabIndex = 5;
+            btn_Add.Text = "Ekle";
+            btn_Add.UseVisualStyleBackColor = true;
+            btn_Add.Click += btn_Ekle_Click;
             // 
-            // btnKaydet
+            // btn_Save
             // 
-            btnKaydet.Location = new Point(476, 390);
-            btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(75, 23);
-            btnKaydet.TabIndex = 5;
-            btnKaydet.Text = "Kaydet";
-            btnKaydet.UseVisualStyleBackColor = true;
+            btn_Save.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            btn_Save.Location = new Point(476, 390);
+            btn_Save.Name = "btn_Save";
+            btn_Save.Size = new Size(96, 35);
+            btn_Save.TabIndex = 5;
+            btn_Save.Text = "Kaydet";
+            btn_Save.UseVisualStyleBackColor = true;
             // 
-            // btnSil
+            // btn_Clear
             // 
-            btnSil.Location = new Point(652, 390);
-            btnSil.Name = "btnSil";
-            btnSil.Size = new Size(75, 23);
-            btnSil.TabIndex = 5;
-            btnSil.Text = "Sil";
-            btnSil.UseVisualStyleBackColor = true;
+            btn_Clear.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            btn_Clear.Location = new Point(652, 390);
+            btn_Clear.Name = "btn_Clear";
+            btn_Clear.Size = new Size(75, 35);
+            btn_Clear.TabIndex = 5;
+            btn_Clear.Text = "Sil";
+            btn_Clear.UseVisualStyleBackColor = true;
+            btn_Clear.Click += btn_Clear_Click;
             // 
-            // numericUpDown1
+            // nud_Count
             // 
-            numericUpDown1.Location = new Point(185, 351);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(213, 23);
-            numericUpDown1.TabIndex = 6;
+            nud_Count.Location = new Point(185, 351);
+            nud_Count.Name = "nud_Count";
+            nud_Count.Size = new Size(213, 23);
+            nud_Count.TabIndex = 6;
             // 
             // UserFoodDairy
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(numericUpDown1);
-            Controls.Add(btnSil);
-            Controls.Add(btnKaydet);
-            Controls.Add(btn_Ekle);
+            Controls.Add(nud_Count);
+            Controls.Add(btn_Clear);
+            Controls.Add(btn_Save);
+            Controls.Add(btn_Add);
             Controls.Add(label7);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgv_Choosed);
             Controls.Add(dateTimePicker1);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox4);
-            Controls.Add(comboBox1);
+            Controls.Add(cmb_Portion);
+            Controls.Add(cmb_Foods);
+            Controls.Add(cmb_Daily);
+            Controls.Add(cmb_Category);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -228,8 +236,9 @@
             Controls.Add(label1);
             Name = "UserFoodDairy";
             Text = "UserFoodDairy";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            Load += UserFoodDairy_Load;
+            ((System.ComponentModel.ISupportInitialize)dgv_Choosed).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nud_Count).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -241,17 +250,17 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private ComboBox cmb_Category;
+        private ComboBox cmb_Foods;
+        private ComboBox cmb_Portion;
         private Label label6;
-        private ComboBox comboBox4;
+        private ComboBox cmb_Daily;
         private DateTimePicker dateTimePicker1;
-        private DataGridView dataGridView1;
+        private DataGridView dgv_Choosed;
         private Label label7;
-        private Button btn_Ekle;
-        private Button btnKaydet;
-        private Button btnSil;
-        private NumericUpDown numericUpDown1;
+        private Button btn_Add;
+        private Button btn_Save;
+        private Button btn_Clear;
+        private NumericUpDown nud_Count;
     }
 }
