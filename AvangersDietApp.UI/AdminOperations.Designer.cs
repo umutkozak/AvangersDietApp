@@ -95,7 +95,7 @@
             btn_FoodAdd.TabIndex = 6;
             btn_FoodAdd.Text = "Yemek Ekle";
             btn_FoodAdd.UseVisualStyleBackColor = true;
-            btn_FoodAdd.Click += btn_FoodAdd_Click;
+          
             // 
             // nmr_Calories
             // 

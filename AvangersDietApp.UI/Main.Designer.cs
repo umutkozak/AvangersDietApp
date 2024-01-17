@@ -199,7 +199,7 @@
             Controls.Add(groupBox1);
             Controls.Add(Btn_UyeOl);
             Name = "Main";
-            Text = "Form1";
+            Text = "DailyForm";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

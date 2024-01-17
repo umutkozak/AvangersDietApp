@@ -15,6 +15,9 @@ namespace AvangersDietApp.DAL.Concrate
         public string Password { get; set; }
         public int Weight { get; set; }
         public Gender Gender { get; set; }
-                              
+        public DateTime BirthDate { get; set; }
+
+        public List<UserMealFood> UserMealFoods { get; set; } = new();
+
     }
 }

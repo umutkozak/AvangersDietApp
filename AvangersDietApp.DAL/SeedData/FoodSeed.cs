@@ -17,7 +17,7 @@ namespace AvangersDietApp.DAL.SeedData
         {
             builder.HasData(
                 
-                new Food() { Id = 38, Name = "Kaşar peynir", Proteins = 22.5, Carbohydrates = 0, Fats = 4.4, Calories = 289, CategoryId = 5 },
+                new Food() { Id = 1, Name = "Kaşar peynir", Proteins = 22.5, Carbohydrates = 0, Fats = 4.4, Calories = 289, CategoryId = 5 },
                 new Food() { Id = 2, Name = "Yoğur", Proteins = 3.5, Carbohydrates = 4.7, Fats = 3.3, Calories = 61, CategoryId = 5 },
                 new Food() { Id = 3, Name = "Yumurta", Proteins = 12.1, Carbohydrates = 0, Fats = 11.2, Calories = 158, CategoryId = 6 },
                 new Food() { Id = 4, Name = "Siyah Zeytin", Proteins = 0.15, Carbohydrates = 0, Fats = 4.4, Calories = 207, CategoryId = 6 },
@@ -53,20 +53,20 @@ namespace AvangersDietApp.DAL.SeedData
                 new Food() { Id = 34, Name = "Fındık", Proteins = 12.6, Carbohydrates = 16.8, Fats = 62.4, Calories = 634, CategoryId = 9 },
                 new Food() { Id = 35, Name = "Şam Fıstığı", Proteins = 19.5, Carbohydrates = 19, Fats = 54, Calories = 600, CategoryId = 9 },
                 new Food() { Id = 36, Name = "Beyaz peynir", Proteins = 22.5, Carbohydrates = 0, Fats = 4.4, Calories = 289, CategoryId = 5 },
-                new Food() { Id = 37, Name = "Elma", Proteins = 0.2, Carbohydrates = 15, Fats = 0.6, Calories = 58, CategoryId = 2 }
-                //new Food() { Id = 19, Name = "Armut", Proteins = 0.7, Carbohydrates = 15.3, Fats = 0.4, Calories = 61, CategoryId = 2 },
-                //new Food() { Id = 19, Name = "Çilek", Proteins = 0.7, Carbohydrates = 8.4, Fats = 0.5, Calories = 37, CategoryId = 2 },
-                //new Food() { Id = 19, Name = "İncir", Proteins = 1.2, Carbohydrates = 20.4, Fats = 0.4, Calories = 80, CategoryId = 2 },
-                //new Food() { Id = 19, Name = "Kayısı", Proteins = 1.0, Carbohydrates = 12.9, Fats = 0.2, Calories = 51, CategoryId = 2 },
-                //new Food() { Id = 19, Name = "Kiraz", Proteins = 1.3, Carbohydrates = 17.4, Fats = 0.3, Calories = 70, CategoryId = 2 },
-                //new Food() { Id = 19, Name = "Portakal", Proteins = 1.0, Carbohydrates = 12.3, Fats = 0.2, Calories = 50, CategoryId = 2 },
-                //new Food() { Id = 19, Name = "Şeftali", Proteins = 0.6, Carbohydrates = 9.7, Fats = 0.2, Calories = 85, CategoryId = 2 },
-                //new Food() { Id = 19, Name = "Muz", Proteins = 1.1, Carbohydrates = 11.6, Fats = 0.2, Calories = 50, CategoryId = 2 },
-                //new Food() { Id = 19, Name = "Palamut", Proteins = 24.0, Carbohydrates = 0, Fats = 7.3, Calories = 168, CategoryId = 1 },
-                //new Food() { Id = 19, Name = "Alabalık", Proteins = 18.3, Carbohydrates = 0, Fats = 10.0, Calories = 168, CategoryId = 1 },
-                //new Food() { Id = 19, Name = "Levrek", Proteins = 19.2, Carbohydrates = 0, Fats = 01.2, Calories = 93, CategoryId = 1 },
-                //new Food() { Id = 19, Name = "Uskumru", Proteins = 21.9, Carbohydrates = 0, Fats = 7.3, Calories = 159, CategoryId = 1 },
-                //new Food() { Id = 19, Name = "Palamut", Proteins = 24.0, Carbohydrates = 0, Fats = 7.3, Calories = 168, CategoryId = 1 }
+                new Food() { Id = 37, Name = "Elma", Proteins = 0.2, Carbohydrates = 15, Fats = 0.6, Calories = 58, CategoryId = 2 },
+                new Food() { Id = 38, Name = "Armut", Proteins = 0.7, Carbohydrates = 15.3, Fats = 0.4, Calories = 61, CategoryId = 2 },
+                new Food() { Id = 39, Name = "Çilek", Proteins = 0.7, Carbohydrates = 8.4, Fats = 0.5, Calories = 37, CategoryId = 2 },
+                new Food() { Id = 40, Name = "İncir", Proteins = 1.2, Carbohydrates = 20.4, Fats = 0.4, Calories = 80, CategoryId = 2 },
+                new Food() { Id = 41, Name = "Kayısı", Proteins = 1.0, Carbohydrates = 12.9, Fats = 0.2, Calories = 51, CategoryId = 2 },
+                new Food() { Id = 42, Name = "Kiraz", Proteins = 1.3, Carbohydrates = 17.4, Fats = 0.3, Calories = 70, CategoryId = 2 },
+                new Food() { Id = 43, Name = "Portakal", Proteins = 1.0, Carbohydrates = 12.3, Fats = 0.2, Calories = 50, CategoryId = 2 },
+                new Food() { Id = 44, Name = "Şeftali", Proteins = 0.6, Carbohydrates = 9.7, Fats = 0.2, Calories = 85, CategoryId = 2 },
+                new Food() { Id = 45, Name = "Muz", Proteins = 1.1, Carbohydrates = 11.6, Fats = 0.2, Calories = 50, CategoryId = 2 },
+                new Food() { Id = 46, Name = "Palamut", Proteins = 24.0, Carbohydrates = 0, Fats = 7.3, Calories = 168, CategoryId = 1 },
+                new Food() { Id = 47, Name = "Alabalık", Proteins = 18.3, Carbohydrates = 0, Fats = 10.0, Calories = 168, CategoryId = 1 },
+                new Food() { Id = 48, Name = "Levrek", Proteins = 19.2, Carbohydrates = 0, Fats = 01.2, Calories = 93, CategoryId = 1 },
+                new Food() { Id = 49, Name = "Uskumru", Proteins = 21.9, Carbohydrates = 0, Fats = 7.3, Calories = 159, CategoryId = 1 },
+                new Food() { Id = 50, Name = "Palamut", Proteins = 24.0, Carbohydrates = 0, Fats = 7.3, Calories = 168, CategoryId = 1 }
                 );
         }
     }
