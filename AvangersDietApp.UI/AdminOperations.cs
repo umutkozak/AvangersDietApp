@@ -148,5 +148,7 @@ namespace AvangersDietApp.UI
             register.Show();
             this.Hide();
         }
+
+     
     }
 }

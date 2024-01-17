@@ -24,18 +24,20 @@ namespace AvangersDietApp.UI
         private void btn_KayitOl_Click(object sender, EventArgs e)
         {
             UserManager userManager = new UserManager();
-            if (CheckControls()||ChekPassword())
+            if (CheckControls() || ChekPassword())
             {
                 MessageBox.Show("Hatasız Doldurunuz");
                 return;
             }
-            User user =new User();
-            user.Name=txt_FirstName.Text;
-            user.LastName=txt_LastName.Text;
-            user.UserName=txt_Username.Text;
+            User user = new User();
+            user.Name = txt_FirstName.Text;
+            user.LastName = txt_LastName.Text;
+            user.UserName = txt_Username.Text;
             user.Gender = (Gender)cmb_Gender.SelectedValue;
-            user.Password=msk_Pwd.Text;
-            user.Weight=Convert.ToInt32(numeric_Weight.Value);
+            user.Password = msk_Pwd.Text;
+            user.Weight = Convert.ToInt32(numeric_Weight.Value);
+            user.BirthDate = dtpBirthDate.Value;
+
 
 
             var UserList = userManager.GetAll();
@@ -48,11 +50,11 @@ namespace AvangersDietApp.UI
             {
                 MessageBox.Show("Aynı İsimde Kullanıcı Var İşlem Başarısız...");
             }
-            
-            
+
+
         }
 
-        bool CheckControls() 
+        bool CheckControls()
         {
             foreach (Control item in this.Controls)
             {
@@ -68,7 +70,7 @@ namespace AvangersDietApp.UI
         }
         bool ChekPassword()
         {
-            if (msk_Pwd.Text==msk_PwdAgain.Text)
+            if (msk_Pwd.Text == msk_PwdAgain.Text)
             {
                 return false;
             }
@@ -78,5 +80,6 @@ namespace AvangersDietApp.UI
         {
             cmb_Gender.DataSource = Enum.GetValues(typeof(Gender));
         }
+
     }
 }

@@ -79,7 +79,9 @@ namespace AvangersDietApp.UI
             }
             else
             {
-                
+                UserFoodDairy foodDairy = new UserFoodDairy();
+                foodDairy.Show();
+                this.Hide();
             }
         }
 

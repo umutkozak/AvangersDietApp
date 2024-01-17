@@ -20,6 +20,7 @@ namespace AvangersDietApp.DAL.Context
         public DbSet<Ingredient> Ingredients { get; set;}
         public DbSet<Meal> Meals { get; set; }  
         public DbSet<User> Users { get; set; }
+        public DbSet<UserMealFood> UserMealFoods { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,6 +30,23 @@ namespace AvangersDietApp.DAL.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<UserMealFood>().HasKey(uf => new { uf.UserId, uf.MealId, uf.FoodId});
+
+            modelBuilder.Entity<UserMealFood>()
+                .HasOne(uf => uf.User)
+                .WithMany(u => u.UserMealFoods)
+                .HasForeignKey(uf => uf.UserId);
+
+            modelBuilder.Entity<UserMealFood>()
+                .HasOne(uf => uf.Meal)
+                .WithMany(m => m.UserMealFoods)
+                .HasForeignKey(uf => uf.MealId);
+
+            modelBuilder.Entity<UserMealFood>()
+                .HasOne(uf => uf.Food)
+                .WithMany(f => f.UserMealFoods)
+                .HasForeignKey(uf => uf.FoodId);
+
             modelBuilder.ApplyConfiguration(new CategorySeed());
             modelBuilder.ApplyConfiguration(new FoodSeed());
             base.OnModelCreating(modelBuilder);
