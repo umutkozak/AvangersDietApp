@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
+            btn_Update = new Button();
+            btn_Delete = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -43,36 +43,39 @@
             dataGridView1.Size = new Size(772, 334);
             dataGridView1.TabIndex = 0;
             // 
-            // button1
+            // btn_Update
             // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button1.Location = new Point(27, 367);
-            button1.Name = "button1";
-            button1.Size = new Size(316, 52);
-            button1.TabIndex = 1;
-            button1.Text = "Yemek Güncelle";
-            button1.UseVisualStyleBackColor = true;
+            btn_Update.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btn_Update.Location = new Point(27, 367);
+            btn_Update.Name = "btn_Update";
+            btn_Update.Size = new Size(316, 52);
+            btn_Update.TabIndex = 1;
+            btn_Update.Text = "Yemek Güncelle";
+            btn_Update.UseVisualStyleBackColor = true;
+            btn_Update.Click += button1_Click;
             // 
-            // button2
+            // btn_Delete
             // 
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button2.Location = new Point(396, 367);
-            button2.Name = "button2";
-            button2.Size = new Size(325, 52);
-            button2.TabIndex = 1;
-            button2.Text = "Yemek Sil";
-            button2.UseVisualStyleBackColor = true;
+            btn_Delete.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btn_Delete.Location = new Point(396, 367);
+            btn_Delete.Name = "btn_Delete";
+            btn_Delete.Size = new Size(325, 52);
+            btn_Delete.TabIndex = 1;
+            btn_Delete.Text = "Yemek Sil";
+            btn_Delete.UseVisualStyleBackColor = true;
+            btn_Delete.Click += btn_Delete_Click;
             // 
             // FoodDelUpdateOperations
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btn_Delete);
+            Controls.Add(btn_Update);
             Controls.Add(dataGridView1);
             Name = "FoodDelUpdateOperations";
             Text = "FoodDelUpdateOperations";
+            Load += FoodDelUpdateOperations_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -80,7 +83,7 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button button1;
-        private Button button2;
+        private Button btn_Update;
+        private Button btn_Delete;
     }
 }

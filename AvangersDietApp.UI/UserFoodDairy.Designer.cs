@@ -53,9 +53,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Verdana", 12F);
-            label1.Location = new Point(53, 138);
+            label1.Location = new Point(61, 184);
             label1.Name = "label1";
-            label1.Size = new Size(51, 18);
+            label1.Size = new Size(66, 25);
             label1.TabIndex = 0;
             label1.Text = "Öğün";
             // 
@@ -63,9 +63,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Verdana", 12F);
-            label2.Location = new Point(53, 189);
+            label2.Location = new Point(61, 252);
             label2.Name = "label2";
-            label2.Size = new Size(77, 18);
+            label2.Size = new Size(96, 25);
             label2.TabIndex = 0;
             label2.Text = "Kategori";
             // 
@@ -73,9 +73,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Verdana", 12F);
-            label3.Location = new Point(53, 237);
+            label3.Location = new Point(61, 316);
             label3.Name = "label3";
-            label3.Size = new Size(83, 18);
+            label3.Size = new Size(105, 25);
             label3.TabIndex = 0;
             label3.Text = "Yemekler";
             // 
@@ -83,9 +83,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Verdana", 12F);
-            label4.Location = new Point(53, 295);
+            label4.Location = new Point(61, 393);
             label4.Name = "label4";
-            label4.Size = new Size(77, 18);
+            label4.Size = new Size(98, 25);
             label4.TabIndex = 0;
             label4.Text = "Porsiyon";
             // 
@@ -93,9 +93,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Verdana", 12F);
-            label5.Location = new Point(53, 356);
+            label5.Location = new Point(61, 475);
             label5.Name = "label5";
-            label5.Size = new Size(46, 18);
+            label5.Size = new Size(58, 25);
             label5.TabIndex = 0;
             label5.Text = "Adet";
             // 
@@ -103,36 +103,39 @@
             // 
             comboBox1.Font = new Font("Verdana", 12F);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(185, 186);
+            comboBox1.Location = new Point(211, 248);
+            comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(213, 26);
+            comboBox1.Size = new Size(243, 33);
             comboBox1.TabIndex = 1;
             // 
             // comboBox2
             // 
             comboBox2.Font = new Font("Verdana", 12F);
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(185, 237);
+            comboBox2.Location = new Point(211, 316);
+            comboBox2.Margin = new Padding(3, 4, 3, 4);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(213, 26);
+            comboBox2.Size = new Size(243, 33);
             comboBox2.TabIndex = 1;
             // 
             // comboBox3
             // 
             comboBox3.Font = new Font("Verdana", 12F);
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(185, 292);
+            comboBox3.Location = new Point(211, 389);
+            comboBox3.Margin = new Padding(3, 4, 3, 4);
             comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(213, 26);
+            comboBox3.Size = new Size(243, 33);
             comboBox3.TabIndex = 1;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Verdana", 12F);
-            label6.Location = new Point(53, 97);
+            label6.Location = new Point(61, 129);
             label6.Name = "label6";
-            label6.Size = new Size(47, 18);
+            label6.Size = new Size(62, 25);
             label6.TabIndex = 0;
             label6.Text = "Tarih";
             // 
@@ -140,76 +143,85 @@
             // 
             comboBox4.Font = new Font("Verdana", 12F);
             comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(185, 135);
+            comboBox4.Location = new Point(211, 180);
+            comboBox4.Margin = new Padding(3, 4, 3, 4);
             comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(213, 26);
+            comboBox4.Size = new Size(243, 33);
             comboBox4.TabIndex = 1;
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.Font = new Font("Verdana", 12F);
-            dateTimePicker1.Location = new Point(157, 94);
+            dateTimePicker1.Location = new Point(179, 125);
+            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(266, 27);
+            dateTimePicker1.Size = new Size(303, 32);
             dateTimePicker1.TabIndex = 2;
             dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(476, 186);
+            dataGridView1.Location = new Point(544, 248);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(251, 170);
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(287, 227);
             dataGridView1.TabIndex = 3;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(476, 159);
+            label7.Location = new Point(544, 212);
             label7.Name = "label7";
-            label7.Size = new Size(57, 15);
+            label7.Size = new Size(73, 20);
             label7.TabIndex = 4;
             label7.Text = "Seçilenler";
             // 
             // btn_Ekle
             // 
-            btn_Ekle.Location = new Point(185, 390);
+            btn_Ekle.Location = new Point(211, 520);
+            btn_Ekle.Margin = new Padding(3, 4, 3, 4);
             btn_Ekle.Name = "btn_Ekle";
-            btn_Ekle.Size = new Size(75, 23);
+            btn_Ekle.Size = new Size(86, 31);
             btn_Ekle.TabIndex = 5;
             btn_Ekle.Text = "Ekle";
             btn_Ekle.UseVisualStyleBackColor = true;
             // 
             // btnKaydet
             // 
-            btnKaydet.Location = new Point(476, 390);
+            btnKaydet.Location = new Point(544, 520);
+            btnKaydet.Margin = new Padding(3, 4, 3, 4);
             btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(75, 23);
+            btnKaydet.Size = new Size(86, 31);
             btnKaydet.TabIndex = 5;
             btnKaydet.Text = "Kaydet";
             btnKaydet.UseVisualStyleBackColor = true;
+            btnKaydet.Click += btnKaydet_Click;
             // 
             // btnSil
             // 
-            btnSil.Location = new Point(652, 390);
+            btnSil.Location = new Point(745, 520);
+            btnSil.Margin = new Padding(3, 4, 3, 4);
             btnSil.Name = "btnSil";
-            btnSil.Size = new Size(75, 23);
+            btnSil.Size = new Size(86, 31);
             btnSil.TabIndex = 5;
             btnSil.Text = "Sil";
             btnSil.UseVisualStyleBackColor = true;
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(185, 351);
+            numericUpDown1.Location = new Point(211, 468);
+            numericUpDown1.Margin = new Padding(3, 4, 3, 4);
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(213, 23);
+            numericUpDown1.Size = new Size(243, 27);
             numericUpDown1.TabIndex = 6;
             // 
             // UserFoodDairy
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(numericUpDown1);
             Controls.Add(btnSil);
             Controls.Add(btnKaydet);
@@ -227,6 +239,7 @@
             Controls.Add(label2);
             Controls.Add(label6);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "UserFoodDairy";
             Text = "UserFoodDairy";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
