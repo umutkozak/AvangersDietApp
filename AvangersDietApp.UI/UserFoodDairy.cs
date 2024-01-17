@@ -21,5 +21,10 @@ namespace AvangersDietApp.UI
         {
 
         }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

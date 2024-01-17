@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AvangersDietApp.DAL.SeedData;
 
 namespace AvangersDietApp.DAL.Context
 {
@@ -26,6 +27,12 @@ namespace AvangersDietApp.DAL.Context
             base.OnConfiguring(optionsBuilder);
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new CategorySeed());
+            modelBuilder.ApplyConfiguration(new FoodSeed());
+            base.OnModelCreating(modelBuilder);
+        }
 
     }
 }
