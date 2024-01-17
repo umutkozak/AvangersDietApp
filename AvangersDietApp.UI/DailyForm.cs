@@ -18,7 +18,7 @@ namespace AvangersDietApp.UI
     {
         AvangersContext db = new AvangersContext();
         User currentUser = SessionManger.CurrentUser;
-        FoodManager foodManager = new FoodManager();
+        //FoodManager foodManager = new FoodManager();
         
         public DailyForm()
         {
