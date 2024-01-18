@@ -27,7 +27,6 @@ namespace AvangersDietApp.DAL.SeedData
                 new Category() { Id = 9, Name = "Çerez ve Kuru Yemiş" }
 
 
-
                 );
         }
     }

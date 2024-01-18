@@ -162,14 +162,12 @@
             // 
             // btn_Save
             // 
-            btn_Save.Font = new Font("Verdana", 12F);
-            btn_Save.Location = new Point(476, 390);
-            btn_Save.Name = "btn_Save";
-            btn_Save.Size = new Size(106, 36);
-            btn_Save.TabIndex = 5;
-            btn_Save.Text = "Kaydet";
-            btn_Save.UseVisualStyleBackColor = true;
-            btn_Save.Click += btn_Save_Click;
+            btnKaydet.Location = new Point(476, 390);
+            btnKaydet.Name = "btnKaydet";
+            btnKaydet.Size = new Size(75, 23);
+            btnKaydet.TabIndex = 5;
+            btnKaydet.Text = "Kaydet";
+            btnKaydet.UseVisualStyleBackColor = true;
             // 
             // btn_Clear
             // 

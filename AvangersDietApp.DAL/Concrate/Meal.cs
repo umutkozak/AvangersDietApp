@@ -13,7 +13,15 @@ namespace AvangersDietApp.DAL.Concrate
         public int UserId { get; set; }
         public MealType MealType { get; set; } // Öğün bilgisi
         public List<Ingredient> MealList { get; set; }
-
+        public int MealId { get; set; }
+        public int FoodId { get; set; }
+        public string Name { get; set; }
         public DateTime MealTime { get; set; }
+
+        public List<Ingredient> MealList { get; set; } = new();
+
+        public List<UserMealFood> UserMealFoods { get; set; } = new();
+    
+
     }
 }

@@ -4,6 +4,7 @@ using AvangersDietApp.DAL.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AvangersDietApp.DAL.Migrations
 {
     [DbContext(typeof(AvangersContext))]
-    partial class AvangersContextModelSnapshot : ModelSnapshot
+    [Migration("20240115172026_data-added3")]
+    partial class dataadded3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -579,8 +582,9 @@ namespace AvangersDietApp.DAL.Migrations
                     b.Property<DateTime>("MealTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("MealType")
-                        .HasColumnType("int");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");

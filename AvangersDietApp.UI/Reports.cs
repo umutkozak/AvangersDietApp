@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AvangersDietApp.BLL.Concrate;
+using AvangersDietApp.DAL.Concrate;
+using AvangersDietApp.DAL.Context;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,17 @@ namespace AvangersDietApp.UI
         public Reports()
         {
             InitializeComponent();
+        }
+        AvangersContext context=new AvangersContext();
+        private void Reports_Load(object sender, EventArgs e)
+        {
+            FoodStrategyManager foodStrategyManager = new FoodStrategyManager();
+            var foodList=foodStrategyManager.GetAll();
+            
+            for (int i = 0; i < foodList.Count; i++) 
+            {
+               
+            }
         }
     }
 }
