@@ -23,6 +23,7 @@ namespace AvangersDietApp.UI
         CategoryManager categoryManager = new CategoryManager();
         Category category = new Category();
 
+
         private void btnFoodDelUpd_Click(object sender, EventArgs e)
         {
             FoodDelUpdateOperations fdo = new FoodDelUpdateOperations();
