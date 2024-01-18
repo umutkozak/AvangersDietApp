@@ -18,7 +18,7 @@ namespace AvangersDietApp.DAL.Concrate
         public string Name { get; set; }
         public DateTime MealTime { get; set; }
 
-        public List<Ingredient> MealList { get; set; } = new();
+       
 
         public List<UserMealFood> UserMealFoods { get; set; } = new();
     
