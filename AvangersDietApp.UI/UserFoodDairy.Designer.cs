@@ -40,9 +40,9 @@
             dgv_Choosed = new DataGridView();
             label7 = new Label();
             btn_Add = new Button();
-            btn_Save = new Button();
             btn_Clear = new Button();
             nud_Count = new NumericUpDown();
+            btn_save = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_Choosed).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nud_Count).BeginInit();
             SuspendLayout();
@@ -160,15 +160,6 @@
             btn_Add.UseVisualStyleBackColor = true;
             btn_Add.Click += btn_Add_Click;
             // 
-            // btn_Save
-            // 
-            btnKaydet.Location = new Point(476, 390);
-            btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(75, 23);
-            btnKaydet.TabIndex = 5;
-            btnKaydet.Text = "Kaydet";
-            btnKaydet.UseVisualStyleBackColor = true;
-            // 
             // btn_Clear
             // 
             btn_Clear.Font = new Font("Verdana", 12F);
@@ -188,14 +179,24 @@
             nud_Count.Size = new Size(213, 27);
             nud_Count.TabIndex = 6;
             // 
+            // btn_save
+            // 
+            btn_save.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            btn_save.Location = new Point(476, 390);
+            btn_save.Name = "btn_save";
+            btn_save.Size = new Size(89, 36);
+            btn_save.TabIndex = 8;
+            btn_save.Text = "Kaydet";
+            btn_save.UseVisualStyleBackColor = true;
+            // 
             // UserFoodDairy
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btn_save);
             Controls.Add(nud_Count);
             Controls.Add(btn_Clear);
-            Controls.Add(btn_Save);
             Controls.Add(btn_Add);
             Controls.Add(label7);
             Controls.Add(dgv_Choosed);
@@ -233,8 +234,8 @@
         private DataGridView dgv_Choosed;
         private Label label7;
         private Button btn_Add;
-        private Button btn_Save;
         private Button btn_Clear;
         private NumericUpDown nud_Count;
+        private Button btn_save;
     }
 }

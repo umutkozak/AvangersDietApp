@@ -54,11 +54,6 @@ namespace AvangersDietApp.UI
 
         }
 
-        private void btn_Ekle_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Add_Click(object sender, EventArgs e)
         {
             DataGridViewComboBoxColumn MealTypeColumn = new DataGridViewComboBoxColumn();
@@ -87,9 +82,6 @@ namespace AvangersDietApp.UI
 
         }
 
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
