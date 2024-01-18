@@ -579,9 +579,8 @@ namespace AvangersDietApp.DAL.Migrations
                     b.Property<DateTime>("MealTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("MealType")
+                        .HasColumnType("int");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
