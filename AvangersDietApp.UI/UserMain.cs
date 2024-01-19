@@ -2,6 +2,7 @@
 using AvangersDietApp.DAL.Context;
 using AvangersDietApp.DAL.Contract;
 using AvangersDietApp.DAL.SubClasses;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,8 +16,10 @@ using System.Windows.Forms;
 
 namespace AvangersDietApp.UI
 {
+
     public partial class UserMain : Form
     {
+        SqlConnection baglan = new SqlConnection("server=.;database=AvangersDietDB;uid=sa;pwd=123;trustservercertificate=true;");
         AvangersContext db = new AvangersContext();
         private readonly User _currentUser;
         User? dbUser;

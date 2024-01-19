@@ -48,6 +48,7 @@
             // lblCategories
             // 
             lblCategories.AutoSize = true;
+            lblCategories.BackColor = Color.Transparent;
             lblCategories.Font = new Font("Verdana", 12F, FontStyle.Bold);
             lblCategories.Location = new Point(27, 239);
             lblCategories.Name = "lblCategories";
@@ -58,6 +59,7 @@
             // lblFoods
             // 
             lblFoods.AutoSize = true;
+            lblFoods.BackColor = Color.Transparent;
             lblFoods.Font = new Font("Verdana", 12F, FontStyle.Bold);
             lblFoods.Location = new Point(27, 287);
             lblFoods.Name = "lblFoods";
@@ -68,6 +70,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = SystemColors.ActiveBorder;
             label5.Font = new Font("Verdana", 12F, FontStyle.Bold);
             label5.Location = new Point(26, 344);
             label5.Name = "label5";
@@ -107,6 +110,7 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
             label7.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label7.Location = new Point(476, 24);
             label7.Name = "label7";
@@ -158,6 +162,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label1.ForeColor = Color.Chocolate;
             label1.Location = new Point(26, 198);
@@ -180,6 +185,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.yinimodel_post_dietgreenhouseeffect_1280x720_min2;
+            BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(800, 450);
             Controls.Add(lblMealName);
             Controls.Add(label1);
@@ -196,7 +203,7 @@
             Controls.Add(lblCategories);
             Name = "UserFoodDairy";
             Text = "UserFoodDairy";
-            FormClosed += UserFoodDairy_FormClosed;          
+            FormClosed += UserFoodDairy_FormClosed;
             ((System.ComponentModel.ISupportInitialize)dgv_Choosed).EndInit();
             ((System.ComponentModel.ISupportInitialize)nud_Count).EndInit();
             ResumeLayout(false);

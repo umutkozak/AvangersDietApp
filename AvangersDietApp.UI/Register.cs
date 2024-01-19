@@ -75,6 +75,16 @@ namespace AvangersDietApp.UI
             {
                 return false;
             }
+            if (!msk_Pwd.Text.Any(char.IsDigit))
+            {
+                //MessageBox.Show("Şifre en az bir sayı içermelidir.");
+                return false;
+            }
+            if (!msk_Pwd.Text.Any(ch => !char.IsLetterOrDigit(ch)))
+            {
+                // MessageBox.Show("Şifre en az bir özel karakter içermelidir.");
+                return false;
+            }
             return true;
         }
         private void Register_Load(object sender, EventArgs e)
