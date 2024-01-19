@@ -8,16 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AvangersDietApp.DAL.SeedData;
+using AvangersDietApp.DAL.SubClasses;
 
 namespace AvangersDietApp.DAL.Context
 {
     public class AvangersContext: DbContext
     {
+        public DbSet<Breakfast> Breakfasts { get; set; }
+        public DbSet<Lunch> Lunchs { get; set; }
+        public DbSet<Dinner> Dinners { get; set; }
+        public DbSet<Snack> Snacks { get; set; }
         public DbSet<Admin> Admin { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<Food> Food { get; set; }   
-        public DbSet<FoodStrategy> FoodStrategy { get; set; }
-        public DbSet<Ingredient> Ingredients { get; set;}
+        public DbSet<FoodStrategy> FoodStrategy { get; set; }        
         public DbSet<Meal> Meals { get; set; }  
         public DbSet<User> Users { get; set; }
         public DbSet<UserMealFood> UserMealFoods { get; set; }
@@ -47,9 +51,21 @@ namespace AvangersDietApp.DAL.Context
                 .WithMany(f => f.UserMealFoods)
                 .HasForeignKey(uf => uf.FoodId);
 
-            modelBuilder.ApplyConfiguration(new CategorySeed());
+            //modelBuilder.ApplyConfiguration(new CategorySeed());
             modelBuilder.ApplyConfiguration(new FoodSeed());
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Category>().HasData(
+              new Category() { Id = 1, CategoryName = "Et" },
+              new Category() { Id = 2, CategoryName = "Meyve" },
+              new Category() { Id = 3, CategoryName = "Sebze ve Bakliyat" },
+              new Category() { Id = 4, CategoryName = "Atıştırmalık" },
+              new Category() { Id = 5, CategoryName = "Süt Ürünleri" },
+              new Category() { Id = 6, CategoryName = "Diğer Ürünler" },
+              new Category() { Id = 7, CategoryName = "Unlu Ürünler" },
+              new Category() { Id = 8, CategoryName = "Tatlılar" },
+              new Category() { Id = 9, CategoryName = "Çerez ve Kuru Yemiş" });
+
         }
 
     }

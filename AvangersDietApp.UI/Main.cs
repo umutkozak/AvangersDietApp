@@ -51,6 +51,7 @@ namespace AvangersDietApp.UI
         {
             User user = context.Users.FirstOrDefault(a => a.UserName == txt_User.Text && a.Password==msk_UserPass.Text);
 
+            SessionManger.CurrentUser = user;
            
 
             if (string.IsNullOrWhiteSpace(txt_User.Text)||string.IsNullOrWhiteSpace(msk_UserPass.Text))
@@ -79,8 +80,8 @@ namespace AvangersDietApp.UI
             }
             else
             {
-                UserFoodDairy foodDairy = new UserFoodDairy();
-                foodDairy.Show();
+                UserMain userMain = new UserMain();
+                userMain.Show();
                 this.Hide();
             }
         }

@@ -9,8 +9,15 @@ namespace AvangersDietApp.DAL.Concrate
 {
     public class Category:BaseEntity
     {
-        public string Name { get; set; }
+        public int Id { get; set; }
+        public string CategoryName { get; set; }
 
         public List<Food> Foods { get; set; }
+
+        public override string ToString()
+        {
+            return CategoryName;
+        }
+
     }
 }
