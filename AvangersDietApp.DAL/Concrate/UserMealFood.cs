@@ -14,7 +14,7 @@ namespace AvangersDietApp.DAL.Concrate
 
         public int FoodId { get; set; }
 
-        public bool IsActive { get; set; }
+
 
 
 

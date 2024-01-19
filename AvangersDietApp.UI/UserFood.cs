@@ -116,7 +116,7 @@ namespace AvangersDietApp.UI
                 MealId = currentMeal.MealId,
                 Food = food,
                 FoodId = food!.Id,
-                IsActive = true
+              
             });
 
             UpdateFoods();
