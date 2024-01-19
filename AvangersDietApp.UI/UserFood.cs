@@ -2,6 +2,9 @@
 using AvangersDietApp.DAL.Concrate;
 using AvangersDietApp.DAL.Context;
 using AvangersDietApp.DAL.Contract;
+using AvangersDietApp.DAL.DTO;
+using AvangersDietApp.DAL.Helper;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,6 +20,7 @@ namespace AvangersDietApp.UI
 {
     public partial class UserFood : Form
     {
+        SqlConnection baglan = new SqlConnection("server=.;database=AvangersDietDB;uid=sa;pwd=123;trustservercertificate=true;");
         AvangersContext db = new AvangersContext();
         User currentUser = SessionManger.CurrentUser;
         Meal currentMeal = SessionManger.CurrentMeal;
@@ -132,13 +136,30 @@ namespace AvangersDietApp.UI
 
         private void btn_Clear_Click(object sender, EventArgs e)
         {
-            if (dgv_Choosed.SelectedRows.Count < 0)
-                return;
+            //if (dgv_Choosed.SelectedRows.Count < 0)
+            //    return;
 
-            UserMealFood deletedUfpm = (UserMealFood)dgv_Choosed.SelectedRows[0].DataBoundItem;
-           
-                selectedUfs.Remove(deletedUfpm);
-                UpdateFoods();
+            //UserMealFood deletedUfpm = (UserMealFood)dgv_Choosed.SelectedRows[0].DataBoundItem;
+
+            //    selectedUfs.Remove(deletedUfpm);
+            //    UpdateFoods();---null exeption entity
+
+            try
+            {
+                baglan.Open();
+                SqlCommand kmt = new SqlCommand("DELETE FROM UserMealFood WHERE Name = @Name", baglan);
+                kmt.Parameters.AddWithValue("@Name", dgv_Choosed.CurrentRow.Cells[0].Value.ToString());
+                kmt.ExecuteNonQuery();
+                baglan.Close();
+                MessageBox.Show("Kayıt Silindi");
+
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Beklenmedik bir hata oluştu");
+            }
         }
 
 

@@ -254,7 +254,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.arasayfalar;
+            BackgroundImage = Properties.Resources.black_1072366_1280;
             ClientSize = new Size(1064, 928);
             Controls.Add(label2);
             Controls.Add(lstTop5);
