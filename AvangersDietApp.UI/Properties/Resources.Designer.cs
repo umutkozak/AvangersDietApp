@@ -183,6 +183,16 @@ namespace AvangersDietApp.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap indir {
+            get {
+                object obj = ResourceManager.GetObject("indir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogınForm {
             get {
                 object obj = ResourceManager.GetObject("LogınForm", resourceCulture);

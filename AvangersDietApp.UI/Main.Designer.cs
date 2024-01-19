@@ -194,6 +194,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.indir;
             ClientSize = new Size(869, 432);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
