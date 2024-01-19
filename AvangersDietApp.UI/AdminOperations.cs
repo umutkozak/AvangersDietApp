@@ -36,7 +36,7 @@ namespace AvangersDietApp.UI
         {
             if (!string.IsNullOrEmpty(txt_Category.Text))
             {
-                category.Name=txt_Category.Text;
+                category.CategoryName=txt_Category.Text;
                 categoryManager.Add(category);
             }
             else
