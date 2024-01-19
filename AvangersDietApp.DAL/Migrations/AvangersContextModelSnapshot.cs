@@ -17,7 +17,7 @@ namespace AvangersDietApp.DAL.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.14")
+                .HasAnnotation("ProductVersion", "7.0.15")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -51,7 +51,7 @@ namespace AvangersDietApp.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("CategoryName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -63,47 +63,47 @@ namespace AvangersDietApp.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "Et"
+                            CategoryName = "Et"
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Meyve"
+                            CategoryName = "Meyve"
                         },
                         new
                         {
                             Id = 3,
-                            Name = "Sebze ve Bakliyat"
+                            CategoryName = "Sebze ve Bakliyat"
                         },
                         new
                         {
                             Id = 4,
-                            Name = "Atıştırmalık"
+                            CategoryName = "Atıştırmalık"
                         },
                         new
                         {
                             Id = 5,
-                            Name = "Süt Ürünleri"
+                            CategoryName = "Süt Ürünleri"
                         },
                         new
                         {
                             Id = 6,
-                            Name = "Diğer Ürünler"
+                            CategoryName = "Diğer Ürünler"
                         },
                         new
                         {
                             Id = 7,
-                            Name = "Unlu Ürünler"
+                            CategoryName = "Unlu Ürünler"
                         },
                         new
                         {
                             Id = 8,
-                            Name = "Tatlılar"
+                            CategoryName = "Tatlılar"
                         },
                         new
                         {
                             Id = 9,
-                            Name = "Çerez ve Kuru Yemiş"
+                            CategoryName = "Çerez ve Kuru Yemiş"
                         });
                 });
 
@@ -145,6 +145,8 @@ namespace AvangersDietApp.DAL.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
                     b.HasIndex("FoodStrategyId");
 
                     b.ToTable("Food");
@@ -152,7 +154,7 @@ namespace AvangersDietApp.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = -1,
+                            Id = 1,
                             Calories = 289.0,
                             Carbohydrates = 0.0,
                             CategoryId = 5,
@@ -167,7 +169,7 @@ namespace AvangersDietApp.DAL.Migrations
                             Carbohydrates = 4.7000000000000002,
                             CategoryId = 5,
                             Fats = 3.2999999999999998,
-                            Name = "Yoğur",
+                            Name = "Yoğurt",
                             Proteins = 3.5
                         },
                         new
@@ -519,6 +521,136 @@ namespace AvangersDietApp.DAL.Migrations
                             Fats = 0.59999999999999998,
                             Name = "Elma",
                             Proteins = 0.20000000000000001
+                        },
+                        new
+                        {
+                            Id = 38,
+                            Calories = 61.0,
+                            Carbohydrates = 15.300000000000001,
+                            CategoryId = 2,
+                            Fats = 0.40000000000000002,
+                            Name = "Armut",
+                            Proteins = 0.69999999999999996
+                        },
+                        new
+                        {
+                            Id = 39,
+                            Calories = 37.0,
+                            Carbohydrates = 8.4000000000000004,
+                            CategoryId = 2,
+                            Fats = 0.5,
+                            Name = "Çilek",
+                            Proteins = 0.69999999999999996
+                        },
+                        new
+                        {
+                            Id = 40,
+                            Calories = 80.0,
+                            Carbohydrates = 20.399999999999999,
+                            CategoryId = 2,
+                            Fats = 0.40000000000000002,
+                            Name = "İncir",
+                            Proteins = 1.2
+                        },
+                        new
+                        {
+                            Id = 41,
+                            Calories = 51.0,
+                            Carbohydrates = 12.9,
+                            CategoryId = 2,
+                            Fats = 0.20000000000000001,
+                            Name = "Kayısı",
+                            Proteins = 1.0
+                        },
+                        new
+                        {
+                            Id = 42,
+                            Calories = 70.0,
+                            Carbohydrates = 17.399999999999999,
+                            CategoryId = 2,
+                            Fats = 0.29999999999999999,
+                            Name = "Kiraz",
+                            Proteins = 1.3
+                        },
+                        new
+                        {
+                            Id = 43,
+                            Calories = 50.0,
+                            Carbohydrates = 12.300000000000001,
+                            CategoryId = 2,
+                            Fats = 0.20000000000000001,
+                            Name = "Portakal",
+                            Proteins = 1.0
+                        },
+                        new
+                        {
+                            Id = 44,
+                            Calories = 85.0,
+                            Carbohydrates = 9.6999999999999993,
+                            CategoryId = 2,
+                            Fats = 0.20000000000000001,
+                            Name = "Şeftali",
+                            Proteins = 0.59999999999999998
+                        },
+                        new
+                        {
+                            Id = 45,
+                            Calories = 50.0,
+                            Carbohydrates = 11.6,
+                            CategoryId = 2,
+                            Fats = 0.20000000000000001,
+                            Name = "Muz",
+                            Proteins = 1.1000000000000001
+                        },
+                        new
+                        {
+                            Id = 46,
+                            Calories = 168.0,
+                            Carbohydrates = 0.0,
+                            CategoryId = 1,
+                            Fats = 7.2999999999999998,
+                            Name = "Palamut",
+                            Proteins = 24.0
+                        },
+                        new
+                        {
+                            Id = 47,
+                            Calories = 168.0,
+                            Carbohydrates = 0.0,
+                            CategoryId = 1,
+                            Fats = 10.0,
+                            Name = "Alabalık",
+                            Proteins = 18.300000000000001
+                        },
+                        new
+                        {
+                            Id = 48,
+                            Calories = 93.0,
+                            Carbohydrates = 0.0,
+                            CategoryId = 1,
+                            Fats = 1.2,
+                            Name = "Levrek",
+                            Proteins = 19.199999999999999
+                        },
+                        new
+                        {
+                            Id = 49,
+                            Calories = 159.0,
+                            Carbohydrates = 0.0,
+                            CategoryId = 1,
+                            Fats = 7.2999999999999998,
+                            Name = "Uskumru",
+                            Proteins = 21.899999999999999
+                        },
+                        new
+                        {
+                            Id = 50,
+                            Calories = 168.0,
+                            Carbohydrates = 0.0,
+                            CategoryId = 1,
+                            Fats = 7.2999999999999998,
+                            Name = "Palamut",
+                            Proteins = 24.0
                         });
                 });
 
@@ -542,32 +674,6 @@ namespace AvangersDietApp.DAL.Migrations
                     b.ToTable("FoodStrategy");
                 });
 
-            modelBuilder.Entity("AvangersDietApp.DAL.Concrate.Ingredient", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<double>("Amount")
-                        .HasColumnType("float");
-
-                    b.Property<int>("FoodId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("MealId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FoodId");
-
-                    b.HasIndex("MealId");
-
-                    b.ToTable("Ingredients");
-                });
-
             modelBuilder.Entity("AvangersDietApp.DAL.Concrate.Meal", b =>
                 {
                     b.Property<int>("Id")
@@ -575,6 +681,19 @@ namespace AvangersDietApp.DAL.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("Calorie")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FoodId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MealId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("MealTime")
                         .HasColumnType("datetime2");
@@ -588,6 +707,10 @@ namespace AvangersDietApp.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Meals");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Meal");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("AvangersDietApp.DAL.Concrate.User", b =>
@@ -597,6 +720,9 @@ namespace AvangersDietApp.DAL.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("Gender")
                         .HasColumnType("int");
@@ -625,26 +751,104 @@ namespace AvangersDietApp.DAL.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("AvangersDietApp.DAL.Concrate.UserMealFood", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MealId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FoodId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId", "MealId", "FoodId");
+
+                    b.HasIndex("FoodId");
+
+                    b.HasIndex("MealId");
+
+                    b.ToTable("UserMealFoods");
+                });
+
+            modelBuilder.Entity("AvangersDietApp.DAL.SubClasses.Breakfast", b =>
+                {
+                    b.HasBaseType("AvangersDietApp.DAL.Concrate.Meal");
+
+                    b.HasDiscriminator().HasValue("Breakfast");
+                });
+
+            modelBuilder.Entity("AvangersDietApp.DAL.SubClasses.Dinner", b =>
+                {
+                    b.HasBaseType("AvangersDietApp.DAL.Concrate.Meal");
+
+                    b.HasDiscriminator().HasValue("Dinner");
+                });
+
+            modelBuilder.Entity("AvangersDietApp.DAL.SubClasses.Lunch", b =>
+                {
+                    b.HasBaseType("AvangersDietApp.DAL.Concrate.Meal");
+
+                    b.HasDiscriminator().HasValue("Lunch");
+                });
+
+            modelBuilder.Entity("AvangersDietApp.DAL.SubClasses.Snack", b =>
+                {
+                    b.HasBaseType("AvangersDietApp.DAL.Concrate.Meal");
+
+                    b.HasDiscriminator().HasValue("Snack");
+                });
+
             modelBuilder.Entity("AvangersDietApp.DAL.Concrate.Food", b =>
                 {
+                    b.HasOne("AvangersDietApp.DAL.Concrate.Category", "Category")
+                        .WithMany("Foods")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("AvangersDietApp.DAL.Concrate.FoodStrategy", null)
                         .WithMany("Foodlist")
                         .HasForeignKey("FoodStrategyId");
+
+                    b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("AvangersDietApp.DAL.Concrate.Ingredient", b =>
+            modelBuilder.Entity("AvangersDietApp.DAL.Concrate.UserMealFood", b =>
                 {
                     b.HasOne("AvangersDietApp.DAL.Concrate.Food", "Food")
-                        .WithMany()
+                        .WithMany("UserMealFoods")
                         .HasForeignKey("FoodId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AvangersDietApp.DAL.Concrate.Meal", null)
-                        .WithMany("MealList")
-                        .HasForeignKey("MealId");
+                    b.HasOne("AvangersDietApp.DAL.Concrate.Meal", "Meal")
+                        .WithMany("UserMealFoods")
+                        .HasForeignKey("MealId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AvangersDietApp.DAL.Concrate.User", "User")
+                        .WithMany("UserMealFoods")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Food");
+
+                    b.Navigation("Meal");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("AvangersDietApp.DAL.Concrate.Category", b =>
+                {
+                    b.Navigation("Foods");
+                });
+
+            modelBuilder.Entity("AvangersDietApp.DAL.Concrate.Food", b =>
+                {
+                    b.Navigation("UserMealFoods");
                 });
 
             modelBuilder.Entity("AvangersDietApp.DAL.Concrate.FoodStrategy", b =>
@@ -654,7 +858,12 @@ namespace AvangersDietApp.DAL.Migrations
 
             modelBuilder.Entity("AvangersDietApp.DAL.Concrate.Meal", b =>
                 {
-                    b.Navigation("MealList");
+                    b.Navigation("UserMealFoods");
+                });
+
+            modelBuilder.Entity("AvangersDietApp.DAL.Concrate.User", b =>
+                {
+                    b.Navigation("UserMealFoods");
                 });
 #pragma warning restore 612, 618
         }

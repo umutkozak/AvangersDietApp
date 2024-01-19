@@ -45,6 +45,7 @@ namespace AvangersDietApp.UI
             {
                 userManager.Add(user);
                 MessageBox.Show("Kayıt İşlemi Başarılı");
+                new Main().Show();
             }
             else
             {

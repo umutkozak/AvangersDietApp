@@ -18,7 +18,7 @@ namespace AvangersDietApp.DAL.SeedData
             builder.HasData(
                 
                 new Food() { Id = 1, Name = "Kaşar peynir", Proteins = 22.5, Carbohydrates = 0, Fats = 4.4, Calories = 289, CategoryId = 5 },
-                new Food() { Id = 2, Name = "Yoğur", Proteins = 3.5, Carbohydrates = 4.7, Fats = 3.3, Calories = 61, CategoryId = 5 },
+                new Food() { Id = 2, Name = "Yoğurt", Proteins = 3.5, Carbohydrates = 4.7, Fats = 3.3, Calories = 61, CategoryId = 5 },
                 new Food() { Id = 3, Name = "Yumurta", Proteins = 12.1, Carbohydrates = 0, Fats = 11.2, Calories = 158, CategoryId = 6 },
                 new Food() { Id = 4, Name = "Siyah Zeytin", Proteins = 0.15, Carbohydrates = 0, Fats = 4.4, Calories = 207, CategoryId = 6 },
                 new Food() { Id = 5, Name = "Domates", Proteins = 1, Carbohydrates = 4, Fats = 0.3, Calories = 25, CategoryId = 3 },
