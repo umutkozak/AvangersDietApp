@@ -95,7 +95,6 @@
             btn_FoodAdd.TabIndex = 6;
             btn_FoodAdd.Text = "Yemek Ekle";
             btn_FoodAdd.UseVisualStyleBackColor = true;
-          
             // 
             // nmr_Calories
             // 
@@ -310,12 +309,15 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.arasayfalar;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(935, 520);
             Controls.Add(btn_Reports);
             Controls.Add(btnFoodDelUpd);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            DoubleBuffered = true;
             Name = "AdminOperations";
             Text = "AdminOperations";
             Load += AdminOperations_Load;
