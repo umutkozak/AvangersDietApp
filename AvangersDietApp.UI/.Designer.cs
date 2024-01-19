@@ -11,15 +11,7 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
+ 
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -56,7 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            SuspendLayout();
+            
             // 
             // pictureBox1
             // 
@@ -108,7 +100,7 @@
             dtpMealTime.Name = "dtpMealTime";
             dtpMealTime.Size = new Size(200, 23);
             dtpMealTime.TabIndex = 4;
-            dtpMealTime.ValueChanged += dtpMealTime_ValueChanged;
+            
             // 
             // label1
             // 
@@ -330,44 +322,7 @@
             lblDinnerCal.TabIndex = 22;
             lblDinnerCal.Text = "0";
             // 
-            // DailyForm
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.arasayfalar;
-            ClientSize = new Size(1176, 809);
-            Controls.Add(label13);
-            Controls.Add(lblDinnerCal);
-            Controls.Add(label11);
-            Controls.Add(lblSnackCal);
-            Controls.Add(label9);
-            Controls.Add(lblLunchCal);
-            Controls.Add(label7);
-            Controls.Add(lblBreakfastCal);
-            Controls.Add(lstDinner);
-            Controls.Add(lstSnack);
-            Controls.Add(lstLunch);
-            Controls.Add(lstBreakfast);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label2);
-            Controls.Add(label3);
-            Controls.Add(lblTotalCal);
-            Controls.Add(label1);
-            Controls.Add(dtpMealTime);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
-            Name = "DailyForm";
-            Text = "DailyForm";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+           
         }
 
         #endregion

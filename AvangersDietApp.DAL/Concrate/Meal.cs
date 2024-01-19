@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace AvangersDietApp.DAL.Concrate
 {
-    public class Meal: BaseEntity
+    public class Meal : BaseEntity
     {
         public int UserId { get; set; }
-        public MealType MealType { get; set; } // Öğün bilgisi
-        public List<Ingredient> MealList { get; set; }
+
+        public MealType MealType { get; set; }
         public int MealId { get; set; }
         public int FoodId { get; set; }
-        public string Name { get; set; }
         public DateTime MealTime { get; set; }
+        public string MealName { get; }
 
-       
+        public double Calorie { get; set; }
 
         public List<UserMealFood> UserMealFoods { get; set; } = new();
-    
 
     }
+
 }

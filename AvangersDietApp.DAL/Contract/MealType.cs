@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace AvangersDietApp.DAL.Contract
 {
-    public enum MealType // Öğün
+    public enum MealType
     {
-        Kahvalti,
-        Öğlen_Yemegi,
-        Aksam_Yemegi,
-        Atistirmalik
+        [Description("Kahvaltı")]
+        BreakFast,
+        [Description("Öğle Yemeği")]
+        Lunch,
+        [Description("Akşam Yemeği")]
+        Dinner,
+        [Description("Ara Öğün")]
+        Snack
     }
 }
