@@ -71,7 +71,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            BackgroundImage = Properties.Resources.black_1072366_12804;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(728, 363);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dataGridView1);

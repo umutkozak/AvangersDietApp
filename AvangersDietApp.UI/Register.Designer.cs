@@ -194,12 +194,14 @@
             dtpBirthDate.Location = new Point(180, 146);
             dtpBirthDate.Name = "dtpBirthDate";
             dtpBirthDate.Size = new Size(200, 23);
-            dtpBirthDate.TabIndex = 8;            
+            dtpBirthDate.TabIndex = 8;
             // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.black_1072366_12801;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(460, 321);
             Controls.Add(dtpBirthDate);
             Controls.Add(label8);
