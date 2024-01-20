@@ -4,6 +4,7 @@ using AvangersDietApp.DAL.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,16 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AvangersDietApp.DAL.Migrations
 {
     [DbContext(typeof(AvangersContext))]
-    partial class AvangersContextModelSnapshot : ModelSnapshot
+<<<<<<<< HEAD:AvangersDietApp.DAL/Migrations/20240119185949_deneme1.Designer.cs
+    [Migration("20240119185949_deneme1")]
+    partial class deneme1
+========
+    [Migration("20240119131707_v1")]
+    partial class v1
+>>>>>>>> master:AvangersDietApp.DAL/Migrations/20240119131707_v1.Designer.cs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -762,6 +770,12 @@ namespace AvangersDietApp.DAL.Migrations
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
 
+<<<<<<<< HEAD:AvangersDietApp.DAL/Migrations/20240119185949_deneme1.Designer.cs
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+========
+>>>>>>>> master:AvangersDietApp.DAL/Migrations/20240119131707_v1.Designer.cs
                     b.HasKey("UserId", "MealId", "FoodId");
 
                     b.HasIndex("FoodId");
