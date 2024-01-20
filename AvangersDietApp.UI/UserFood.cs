@@ -2,6 +2,8 @@
 using AvangersDietApp.DAL.Concrate;
 using AvangersDietApp.DAL.Context;
 using AvangersDietApp.DAL.Contract;
+
+using Microsoft.Data.SqlClient;
 using AvangersDietApp.DAL.DTO;
 using AvangersDietApp.DAL.Helper;
 using Microsoft.EntityFrameworkCore;
