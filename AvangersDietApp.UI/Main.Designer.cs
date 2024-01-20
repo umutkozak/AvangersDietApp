@@ -205,8 +205,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+
+            BackgroundImage = Properties.Resources.black_1072366_12802;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(760, 324);
+
             BackgroundImage = Properties.Resources.indir;
             ClientSize = new Size(869, 432);
+
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(Btn_UyeOl);

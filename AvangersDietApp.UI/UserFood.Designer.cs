@@ -94,7 +94,11 @@
             // label5
             // 
             label5.AutoSize = true;
+
+            label5.BackColor = SystemColors.ActiveBorder;
+
             label5.BackColor = Color.Transparent;
+
             label5.Font = new Font("Verdana", 12F, FontStyle.Bold);
             label5.Location = new Point(26, 344);
             label5.Font = new Font("Verdana", 12F);
@@ -243,7 +247,9 @@
             Name = "UserFoodDairy";
             Text = "UserFoodDairy";
             FormClosed += UserFoodDairy_FormClosed;
+
             Load += UserFoodDairy_Load;
+
             ((System.ComponentModel.ISupportInitialize)dgv_Choosed).EndInit();
             ((System.ComponentModel.ISupportInitialize)nud_Count).EndInit();
             ResumeLayout(false);

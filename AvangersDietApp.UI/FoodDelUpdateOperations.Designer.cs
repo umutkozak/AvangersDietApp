@@ -69,9 +69,17 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+
+            BackgroundImage = Properties.Resources.black_1072366_12804;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(728, 363);
+            Controls.Add(button2);
+            Controls.Add(button1);
+
             ClientSize = new Size(800, 451);
             Controls.Add(btn_Delete);
             Controls.Add(btn_Update);
+
             Controls.Add(dataGridView1);
             Name = "FoodDelUpdateOperations";
             Text = "FoodDelUpdateOperations";
