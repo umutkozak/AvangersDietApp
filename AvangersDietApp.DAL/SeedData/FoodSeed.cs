@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 namespace AvangersDietApp.DAL.SeedData
 {
     public class FoodSeed : IEntityTypeConfiguration<Food>
-    {        
+    {
         public void Configure(EntityTypeBuilder<Food> builder)
         {
             builder.HasData(
-                
+
                 new Food() { Id = 1, Name = "Kaşar peynir", Proteins = 22.5, Carbohydrates = 0, Fats = 4.4, Calories = 289, CategoryId = 5 },
                 new Food() { Id = 2, Name = "Yoğurt", Proteins = 3.5, Carbohydrates = 4.7, Fats = 3.3, Calories = 61, CategoryId = 5 },
                 new Food() { Id = 3, Name = "Yumurta", Proteins = 12.1, Carbohydrates = 0, Fats = 11.2, Calories = 158, CategoryId = 6 },

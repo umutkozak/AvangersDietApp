@@ -12,7 +12,7 @@ namespace AvangersDietApp.BLL.Concrate
 {
     public class CategoryManager : IRepository<Category>
     {
-        AvangersContext avangersContext=new AvangersContext();
+        AvangersContext avangersContext = new AvangersContext();
         public void Add(Category entity)
         {
             avangersContext.Add(entity);
@@ -32,12 +32,12 @@ namespace AvangersDietApp.BLL.Concrate
 
         public List<Category> GetAll(Expression<Func<Category, bool>> filter = null)
         {
-            return filter==null?avangersContext.Set<Category>().ToList():avangersContext.Set<Category>().Where(filter).ToList();
+            return filter == null ? avangersContext.Set<Category>().ToList() : avangersContext.Set<Category>().Where(filter).ToList();
         }
 
         public void Update(Category entity)
         {
-            avangersContext.Entry(entity).State =Microsoft.EntityFrameworkCore.EntityState.Modified;
+            avangersContext.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             avangersContext.SaveChanges();
         }
     }

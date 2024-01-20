@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AvangersDietApp.DAL.Contract
 {
-    public enum MealType
+    public enum MealType // Öğün
     {
         [Description("Kahvaltı")]
         BreakFast,

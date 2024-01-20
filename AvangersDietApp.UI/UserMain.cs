@@ -1,9 +1,8 @@
 ﻿using AvangersDietApp.DAL.Concrate;
 using AvangersDietApp.DAL.Context;
 using AvangersDietApp.DAL.Contract;
-using AvangersDietApp.DAL.SubClasses;
-using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,19 +12,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using User = AvangersDietApp.DAL.Concrate.User;
 
 namespace AvangersDietApp.UI
 {
-
     public partial class UserMain : Form
     {
-        SqlConnection baglan = new SqlConnection("server=.;database=AvangersDietDB;uid=sa;pwd=123;trustservercertificate=true;");
         AvangersContext db = new AvangersContext();
         private readonly User _currentUser;
         User? dbUser;
         Meal? currentMeal;
         List<UserMealFood>? userMeals;
-
         public UserMain()
         {
             _currentUser = SessionManger.CurrentUser;
@@ -33,7 +30,6 @@ namespace AvangersDietApp.UI
             InitializeComponent();
             ShowUserName();
             ShowMealCalorie();
-
         }
 
         private void CheckMeal(Meal meal)
@@ -43,7 +39,7 @@ namespace AvangersDietApp.UI
             db.SaveChanges();
 
             Close();
-            new UserFood().ShowDialog();
+            new UserFoodDairy().ShowDialog();
         }
         private void LoadData()
         {
@@ -75,6 +71,7 @@ namespace AvangersDietApp.UI
             lblTotalCal.Text = userMeals.Sum(uf => uf.Meal!.Calorie).ToString();
         }
 
+
         private void btnBreakfast_Click(object sender, EventArgs e)
         {
             currentMeal = userMeals?.FirstOrDefault(uf => uf.Meal!.MealType == MealType.BreakFast)?.Meal;
@@ -88,8 +85,7 @@ namespace AvangersDietApp.UI
             db.Entry(currentMeal).State = EntityState.Detached;
             db.SaveChanges();
             Close();
-            new UserFood().ShowDialog();
-
+            new UserFoodDairy().ShowDialog();
         }
 
         private void btnLunch_Click(object sender, EventArgs e)
@@ -100,17 +96,15 @@ namespace AvangersDietApp.UI
             {
                 CheckMeal(currentMeal);
             }
-            currentMeal = new Meal() { MealType = MealType.Lunch,MealTime = dateTimePicker1.Value.Date };
+            currentMeal = new Meal() { MealType = MealType.Lunch, MealTime = dateTimePicker1.Value.Date };
             SessionManger.CurrentMeal = currentMeal;
             db.Entry(currentMeal).State = EntityState.Detached;
             db.SaveChanges();
             Close();
-            new UserFood().ShowDialog();
-
-
+            new UserFoodDairy().ShowDialog();
         }
 
-        private void btnDinner_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             currentMeal = userMeals?.FirstOrDefault(uf => uf.Meal!.MealType == MealType.Dinner)?.Meal;
 
@@ -124,7 +118,7 @@ namespace AvangersDietApp.UI
             db.Entry(currentMeal).State = EntityState.Detached;
             db.SaveChanges();
             Close();
-            new UserFood().ShowDialog();
+            new UserFoodDairy().ShowDialog();
         }
 
         private void btnSnack_Click(object sender, EventArgs e)
@@ -141,8 +135,9 @@ namespace AvangersDietApp.UI
             db.Entry(currentMeal).State = EntityState.Detached;
             db.SaveChanges();
             Close();
-            new UserFood().ShowDialog();
+            new UserFoodDairy().ShowDialog();
         }
+
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {

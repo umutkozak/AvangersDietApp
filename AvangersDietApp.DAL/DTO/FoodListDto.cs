@@ -4,10 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AvangersDietApp.DAL.Abstract
+namespace AvangersDietApp.DAL.DTO
 {
-    public abstract class BaseEntity
+    public class FoofListDto
     {
+        public double Calories { get; set; }
+        public string? Name { get; set; }
         public int Id { get; set; }
+
+
+
     }
 }

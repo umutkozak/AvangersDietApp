@@ -34,13 +34,13 @@ namespace AvangersDietApp.BLL.Concrate
 
         public List<Meal> GetAll(Expression<Func<Meal, bool>> filter = null)
         {
-            return filter==null ? avangersContext.Set<Meal>().ToList() : avangersContext.Set<Meal>().Where(filter).ToList();
+            return filter == null ? avangersContext.Set<Meal>().ToList() : avangersContext.Set<Meal>().Where(filter).ToList();
         }
 
         public void Update(Meal entity)
         {
-            avangersContext.Entry(entity).State =Microsoft.EntityFrameworkCore.EntityState.Modified;
-            avangersContext.SaveChanges(); 
+            avangersContext.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            avangersContext.SaveChanges();
         }
     }
 }

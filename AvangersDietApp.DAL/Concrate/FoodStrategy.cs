@@ -19,7 +19,7 @@ namespace AvangersDietApp.DAL.Concrate
         }
         public FoodStrategy()
         {
-            
+
         }
 
     }
