@@ -49,6 +49,14 @@
             // 
             // label1
             // 
+            lblCategories.AutoSize = true;
+            lblCategories.BackColor = Color.Transparent;
+            lblCategories.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            lblCategories.Location = new Point(27, 239);
+            lblCategories.Name = "lblCategories";
+            lblCategories.Size = new Size(83, 18);
+            lblCategories.TabIndex = 0;
+            lblCategories.Text = "Kategori";
             label1.AutoSize = true;
             label1.Font = new Font("Verdana", 12F);
             label1.Location = new Point(53, 138);
@@ -59,6 +67,14 @@
             // 
             // label2
             // 
+            lblFoods.AutoSize = true;
+            lblFoods.BackColor = Color.Transparent;
+            lblFoods.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            lblFoods.Location = new Point(27, 287);
+            lblFoods.Name = "lblFoods";
+            lblFoods.Size = new Size(91, 18);
+            lblFoods.TabIndex = 0;
+            lblFoods.Text = "Yemekler";
             label2.AutoSize = true;
             label2.Font = new Font("Verdana", 12F);
             label2.Location = new Point(53, 189);
@@ -80,6 +96,9 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Verdana", 12F, FontStyle.Bold);
+            label5.Location = new Point(26, 344);
             label5.Font = new Font("Verdana", 12F);
             label5.Location = new Point(54, 297);
             label5.Name = "label5";
@@ -143,6 +162,9 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label7.Location = new Point(476, 24);
             label7.Location = new Point(476, 159);
             label7.Name = "label7";
             label7.Size = new Size(57, 15);
@@ -193,6 +215,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.yinimodel_post_dietgreenhouseeffect_1280x720_min2;
+            BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(800, 450);
             Controls.Add(btn_save);
             Controls.Add(nud_Count);
@@ -211,6 +235,7 @@
             Controls.Add(label1);
             Name = "UserFoodDairy";
             Text = "UserFoodDairy";
+            FormClosed += UserFoodDairy_FormClosed;
             Load += UserFoodDairy_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_Choosed).EndInit();
             ((System.ComponentModel.ISupportInitialize)nud_Count).EndInit();

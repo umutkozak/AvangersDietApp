@@ -50,9 +50,10 @@
             // btn_Yonetici
             // 
             btn_Yonetici.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 162);
-            btn_Yonetici.Location = new Point(82, 248);
+            btn_Yonetici.Location = new Point(72, 186);
+            btn_Yonetici.Margin = new Padding(3, 2, 3, 2);
             btn_Yonetici.Name = "btn_Yonetici";
-            btn_Yonetici.Size = new Size(298, 74);
+            btn_Yonetici.Size = new Size(261, 56);
             btn_Yonetici.TabIndex = 0;
             btn_Yonetici.Text = "Yönetici Olarak Giriş Yap";
             btn_Yonetici.UseVisualStyleBackColor = true;
@@ -61,9 +62,10 @@
             // btn_Uye
             // 
             btn_Uye.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btn_Uye.Location = new Point(93, 247);
+            btn_Uye.Location = new Point(81, 185);
+            btn_Uye.Margin = new Padding(3, 2, 3, 2);
             btn_Uye.Name = "btn_Uye";
-            btn_Uye.Size = new Size(316, 71);
+            btn_Uye.Size = new Size(276, 53);
             btn_Uye.TabIndex = 1;
             btn_Uye.Text = "Üye Girişi";
             btn_Uye.UseVisualStyleBackColor = true;
@@ -72,9 +74,10 @@
             // Btn_UyeOl
             // 
             Btn_UyeOl.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            Btn_UyeOl.Location = new Point(163, 349);
+            Btn_UyeOl.Location = new Point(143, 262);
+            Btn_UyeOl.Margin = new Padding(3, 2, 3, 2);
             Btn_UyeOl.Name = "Btn_UyeOl";
-            Btn_UyeOl.Size = new Size(521, 71);
+            Btn_UyeOl.Size = new Size(456, 53);
             Btn_UyeOl.TabIndex = 2;
             Btn_UyeOl.Text = "Üye Ol";
             Btn_UyeOl.UseVisualStyleBackColor = true;
@@ -82,9 +85,10 @@
             // 
             // txt_Admin
             // 
-            txt_Admin.Location = new Point(161, 61);
+            txt_Admin.Location = new Point(141, 46);
+            txt_Admin.Margin = new Padding(3, 2, 3, 2);
             txt_Admin.Name = "txt_Admin";
-            txt_Admin.Size = new Size(219, 27);
+            txt_Admin.Size = new Size(192, 23);
             txt_Admin.TabIndex = 3;
             // 
             // groupBox1
@@ -94,36 +98,39 @@
             groupBox1.Controls.Add(msk_AdminPass);
             groupBox1.Controls.Add(txt_Admin);
             groupBox1.Controls.Add(btn_Yonetici);
-            groupBox1.Location = new Point(12, 12);
+            groupBox1.Location = new Point(10, 9);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(387, 331);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(339, 248);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            groupBox1.Text = "Admin Girişi";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(91, 121);
+            label2.Location = new Point(80, 91);
             label2.Name = "label2";
-            label2.Size = new Size(46, 20);
+            label2.Size = new Size(36, 15);
             label2.TabIndex = 5;
             label2.Text = "Şifre :";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(38, 64);
+            label1.Location = new Point(33, 48);
             label1.Name = "label1";
-            label1.Size = new Size(99, 20);
+            label1.Size = new Size(79, 15);
             label1.TabIndex = 5;
             label1.Text = "Kullanıcı Adı :";
             // 
             // msk_AdminPass
             // 
-            msk_AdminPass.Location = new Point(161, 121);
+            msk_AdminPass.Location = new Point(141, 91);
+            msk_AdminPass.Margin = new Padding(3, 2, 3, 2);
             msk_AdminPass.Name = "msk_AdminPass";
-            msk_AdminPass.Size = new Size(219, 27);
+            msk_AdminPass.Size = new Size(192, 23);
             msk_AdminPass.TabIndex = 4;
             // 
             // groupBox2
@@ -135,69 +142,76 @@
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(txt_User);
             groupBox2.Controls.Add(btn_Uye);
-            groupBox2.Location = new Point(442, 22);
+            groupBox2.Location = new Point(387, 9);
+            groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(415, 321);
+            groupBox2.Padding = new Padding(3, 2, 3, 2);
+            groupBox2.Size = new Size(363, 248);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
-            groupBox2.Text = "groupBox2";
+            groupBox2.Text = "Kullanıcı Girişi";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(115, 115);
+            label6.Location = new Point(101, 86);
             label6.Name = "label6";
-            label6.Size = new Size(46, 20);
+            label6.Size = new Size(36, 15);
             label6.TabIndex = 5;
             label6.Text = "Şifre :";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(16, 115);
+            label4.Location = new Point(14, 86);
             label4.Name = "label4";
-            label4.Size = new Size(0, 20);
+            label4.Size = new Size(0, 15);
             label4.TabIndex = 5;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(62, 58);
+            label5.Location = new Point(54, 44);
             label5.Name = "label5";
-            label5.Size = new Size(99, 20);
+            label5.Size = new Size(79, 15);
             label5.TabIndex = 5;
             label5.Text = "Kullanıcı Adı :";
             // 
             // msk_UserPass
             // 
-            msk_UserPass.Location = new Point(179, 111);
+            msk_UserPass.Location = new Point(157, 83);
+            msk_UserPass.Margin = new Padding(3, 2, 3, 2);
             msk_UserPass.Name = "msk_UserPass";
-            msk_UserPass.Size = new Size(219, 27);
+            msk_UserPass.Size = new Size(192, 23);
             msk_UserPass.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(16, 58);
+            label3.Location = new Point(14, 44);
             label3.Name = "label3";
-            label3.Size = new Size(0, 20);
+            label3.Size = new Size(0, 15);
             label3.TabIndex = 5;
             // 
             // txt_User
             // 
-            txt_User.Location = new Point(179, 51);
+            txt_User.Location = new Point(157, 38);
+            txt_User.Margin = new Padding(3, 2, 3, 2);
             txt_User.Name = "txt_User";
-            txt_User.Size = new Size(219, 27);
+            txt_User.Size = new Size(192, 23);
             txt_User.TabIndex = 3;
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(869, 432);
+            BackgroundImage = Properties.Resources.black_1072366_12802;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(760, 324);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(Btn_UyeOl);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Main";
             Text = "DailyForm";
             groupBox1.ResumeLayout(false);
