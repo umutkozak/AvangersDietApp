@@ -79,6 +79,7 @@
             // lblTotalCal
             // 
             lblTotalCal.AutoSize = true;
+            lblTotalCal.BackColor = Color.Transparent;
             lblTotalCal.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             lblTotalCal.Location = new Point(473, 271);
             lblTotalCal.Name = "lblTotalCal";
@@ -89,6 +90,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label1.Location = new Point(429, 306);
             label1.Name = "label1";
@@ -99,6 +101,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.BackColor = Color.Bisque;
             pictureBox2.Image = Properties.Resources.user;
             pictureBox2.Location = new Point(428, 12);
             pictureBox2.Name = "pictureBox2";
@@ -366,6 +369,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(999, 659);
             Controls.Add(label4);
             Controls.Add(picbTrends);
@@ -379,6 +384,7 @@
             Controls.Add(label1);
             Controls.Add(lblTotalCal);
             Controls.Add(pictureBox1);
+            DoubleBuffered = true;
             Name = "UserMain";
             Text = "UserMain";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

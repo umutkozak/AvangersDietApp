@@ -45,6 +45,7 @@ namespace AvangersDietApp.UI
             {
                 userManager.Add(user);
                 MessageBox.Show("Kayıt İşlemi Başarılı");
+                new Main().Show();
             }
             else
             {
@@ -72,6 +73,16 @@ namespace AvangersDietApp.UI
         {
             if (msk_Pwd.Text == msk_PwdAgain.Text)
             {
+                return false;
+            }
+            if (!msk_Pwd.Text.Any(char.IsDigit))
+            {
+                //MessageBox.Show("Şifre en az bir sayı içermelidir.");
+                return false;
+            }
+            if (!msk_Pwd.Text.Any(ch => !char.IsLetterOrDigit(ch)))
+            {
+                // MessageBox.Show("Şifre en az bir özel karakter içermelidir.");
                 return false;
             }
             return true;

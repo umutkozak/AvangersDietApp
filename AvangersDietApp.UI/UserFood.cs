@@ -6,6 +6,7 @@ using AvangersDietApp.DAL.Contract;
 using Microsoft.Data.SqlClient;
 using AvangersDietApp.DAL.DTO;
 using AvangersDietApp.DAL.Helper;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace AvangersDietApp.UI
 {
     public partial class UserFood : Form
     {
+        SqlConnection baglan = new SqlConnection("server=.;database=AvangersDietDB;uid=sa;pwd=123;trustservercertificate=true;");
         AvangersContext db = new AvangersContext();
         User currentUser = SessionManger.CurrentUser;
         Meal currentMeal = SessionManger.CurrentMeal;
@@ -85,12 +87,12 @@ namespace AvangersDietApp.UI
         private void UpdateFoods()
         {
             dgv_Choosed.DataSource = null;
-            dgv_Choosed.DataSource = selectedUfs.Where(uf => uf.Food != null).Select(uf => new FoofListDto()
+            dgv_Choosed.DataSource = selectedUfs.Where(uf => uf.Food != null).Select(uf => new
             {
-                Calories = uf.Food.Calories,
-                Name = uf.Food.Name,
-                Id = uf.Food.Id,
-            }
+                uf.Food!.Name,
+                FoodCalorie = uf.Food!.Calories
+            }).ToList();
+        }
 
             ).ToList();
         }
@@ -126,7 +128,7 @@ namespace AvangersDietApp.UI
         }
 
         private void btn_save_Click(object sender, EventArgs e)
-        {
+        {         
 
             currentMeal.UserMealFoods.RemoveAll(uf => uf.UserId == currentUser.Id);
             currentMeal.UserMealFoods.AddRange(selectedUfs);
@@ -140,18 +142,30 @@ namespace AvangersDietApp.UI
 
         private void btn_Clear_Click(object sender, EventArgs e)
         {
-            if (dgv_Choosed.SelectedRows.Count < 0)
-                return;
+            //if (dgv_Choosed.SelectedRows.Count < 0)
+            //    return;
+
+            //UserMealFood deletedUfpm = (UserMealFood)dgv_Choosed.SelectedRows[0].DataBoundItem;
+
+            //    selectedUfs.Remove(deletedUfpm);
+            //    UpdateFoods();---null exeption entity
+
+            try
+            {
+                baglan.Open();
+                SqlCommand kmt = new SqlCommand("DELETE FROM UserMealFood WHERE Name = @Name", baglan);
+                kmt.Parameters.AddWithValue("@Name", dgv_Choosed.CurrentRow.Cells[0].Value.ToString());
+                kmt.ExecuteNonQuery();
+                baglan.Close();
+                MessageBox.Show("Kayıt Silindi");
 
 
+            }
+            catch (Exception)
+            {
 
-            var test = dgv_Choosed.SelectedRows[2];
-           
-
-            UserMealFood deletedUfpm = (UserMealFood)dgv_Choosed.SelectedRows[0].DataBoundItem;
-
-            selectedUfs.Remove(deletedUfpm);
-            UpdateFoods();
+                MessageBox.Show("Beklenmedik bir hata oluştu");
+            }
         }
 
 
