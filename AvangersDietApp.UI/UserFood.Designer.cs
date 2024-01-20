@@ -55,6 +55,13 @@
             lblCategories.Size = new Size(83, 18);
             lblCategories.TabIndex = 0;
             lblCategories.Text = "Kategori";
+            label1.AutoSize = true;
+            label1.Font = new Font("Verdana", 12F);
+            label1.Location = new Point(53, 138);
+            label1.Name = "label1";
+            label1.Size = new Size(51, 18);
+            label1.TabIndex = 0;
+            label1.Text = "Öğün";
             // 
             // lblFoods
             // 
@@ -66,13 +73,36 @@
             lblFoods.Size = new Size(91, 18);
             lblFoods.TabIndex = 0;
             lblFoods.Text = "Yemekler";
+            label2.AutoSize = true;
+            label2.Font = new Font("Verdana", 12F);
+            label2.Location = new Point(53, 189);
+            label2.Name = "label2";
+            label2.Size = new Size(77, 18);
+            label2.TabIndex = 0;
+            label2.Text = "Kategori";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Verdana", 12F);
+            label3.Location = new Point(53, 237);
+            label3.Name = "label3";
+            label3.Size = new Size(83, 18);
+            label3.TabIndex = 0;
+            label3.Text = "Yemekler";
             // 
             // label5
             // 
             label5.AutoSize = true;
+
             label5.BackColor = SystemColors.ActiveBorder;
+
+            label5.BackColor = Color.Transparent;
+
             label5.Font = new Font("Verdana", 12F, FontStyle.Bold);
             label5.Location = new Point(26, 344);
+            label5.Font = new Font("Verdana", 12F);
+            label5.Location = new Point(54, 297);
             label5.Name = "label5";
             label5.Size = new Size(49, 18);
             label5.TabIndex = 0;
@@ -113,6 +143,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label7.Location = new Point(476, 24);
+            label7.Location = new Point(476, 159);
             label7.Name = "label7";
             label7.Size = new Size(92, 18);
             label7.TabIndex = 4;
@@ -181,6 +212,18 @@
             lblMealName.Size = new Size(0, 32);
             lblMealName.TabIndex = 10;
             // 
+            // UserFoodDairy
+            // 
+            // lblMealName
+            // 
+            lblMealName.AutoSize = true;
+            lblMealName.Font = new Font("Verdana", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblMealName.ForeColor = Color.Crimson;
+            lblMealName.Location = new Point(91, 51);
+            lblMealName.Name = "lblMealName";
+            lblMealName.Size = new Size(0, 32);
+            lblMealName.TabIndex = 10;
+            // 
             // UserFood
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -201,9 +244,12 @@
             Controls.Add(label5);
             Controls.Add(lblFoods);
             Controls.Add(lblCategories);
-            Name = "UserFood";
+            Name = "UserFoodDairy";
             Text = "UserFoodDairy";
             FormClosed += UserFoodDairy_FormClosed;
+
+            Load += UserFoodDairy_Load;
+
             ((System.ComponentModel.ISupportInitialize)dgv_Choosed).EndInit();
             ((System.ComponentModel.ISupportInitialize)nud_Count).EndInit();
             ResumeLayout(false);

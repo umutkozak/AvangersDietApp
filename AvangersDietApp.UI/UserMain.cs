@@ -113,7 +113,7 @@ namespace AvangersDietApp.UI
         private void btnDinner_Click(object sender, EventArgs e)
         {
             currentMeal = userMeals?.FirstOrDefault(uf => uf.Meal!.MealType == MealType.Dinner)?.Meal;
-            
+
             if (currentMeal != null)
             {
                 CheckMeal(currentMeal);

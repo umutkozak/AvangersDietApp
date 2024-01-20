@@ -762,9 +762,6 @@ namespace AvangersDietApp.DAL.Migrations
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
                     b.HasKey("UserId", "MealId", "FoodId");
 
                     b.HasIndex("FoodId");

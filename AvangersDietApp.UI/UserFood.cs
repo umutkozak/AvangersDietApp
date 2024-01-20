@@ -2,6 +2,8 @@
 using AvangersDietApp.DAL.Concrate;
 using AvangersDietApp.DAL.Context;
 using AvangersDietApp.DAL.Contract;
+
+using Microsoft.Data.SqlClient;
 using AvangersDietApp.DAL.DTO;
 using AvangersDietApp.DAL.Helper;
 using Microsoft.Data.SqlClient;
@@ -32,7 +34,7 @@ namespace AvangersDietApp.UI
 
         public UserFood()
         {
-            LoadData();
+           
             InitializeComponent();
             ShowMealName();
             ListFoodCategories();
@@ -90,7 +92,7 @@ namespace AvangersDietApp.UI
                 Calories = uf.Food.Calories,
                 Name = uf.Food.Name,
                 Id = uf.Food.Id,
-            }
+        }
 
             ).ToList();
         }
@@ -118,7 +120,7 @@ namespace AvangersDietApp.UI
                 MealId = currentMeal.MealId,
                 Food = food,
                 FoodId = food!.Id,
-                IsActive = true
+              
             });
 
             UpdateFoods();
@@ -126,7 +128,7 @@ namespace AvangersDietApp.UI
         }
 
         private void btn_save_Click(object sender, EventArgs e)
-        {
+        {         
 
             currentMeal.UserMealFoods.RemoveAll(uf => uf.UserId == currentUser.Id);
             currentMeal.UserMealFoods.AddRange(selectedUfs);
