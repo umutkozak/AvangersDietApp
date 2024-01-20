@@ -69,12 +69,13 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(800, 451);
+            Controls.Add(btn_Delete);
+            Controls.Add(btn_Update);
             Controls.Add(dataGridView1);
             Name = "FoodDelUpdateOperations";
             Text = "FoodDelUpdateOperations";
+            Load += FoodDelUpdateOperations_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
