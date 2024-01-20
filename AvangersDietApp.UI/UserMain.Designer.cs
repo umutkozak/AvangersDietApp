@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserMain));
             pictureBox1 = new PictureBox();
             lblTotalCal = new Label();
             label1 = new Label();

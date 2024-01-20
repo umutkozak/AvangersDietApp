@@ -59,6 +59,7 @@ namespace AvangersDietApp.UI
 
         private void ShowMealCalorie()
         {
+            var a = dateTimePicker1.Value.Date;
             userMeals = dbUser!.UserMealFoods.Where(uf => uf.Meal?.MealTime == dateTimePicker1.Value.Date).ToList();
 
             if (userMeals.Count == 0)
@@ -78,10 +79,16 @@ namespace AvangersDietApp.UI
         {
             currentMeal = userMeals?.FirstOrDefault(uf => uf.Meal!.MealType == MealType.BreakFast)?.Meal;
 
-            if (currentMeal == null)
+            if (currentMeal != null)
             {
-                currentMeal = new Breakfast() { MealTime = DateTime.Now.Date };
+                CheckMeal(currentMeal);
             }
+            currentMeal = new Meal() { MealType = MealType.BreakFast, MealTime = dateTimePicker1.Value.Date };
+            SessionManger.CurrentMeal = currentMeal;
+            db.Entry(currentMeal).State = EntityState.Detached;
+            db.SaveChanges();
+            Close();
+            new UserFood().ShowDialog();
 
             CheckMeal(currentMeal);
         }
@@ -90,10 +97,17 @@ namespace AvangersDietApp.UI
         {
             currentMeal = userMeals?.FirstOrDefault(uf => uf.Meal!.MealType == MealType.Lunch)?.Meal;
 
-            if (currentMeal == null)
+            if (currentMeal != null)
             {
-                currentMeal = new Lunch() { MealTime = DateTime.Now.Date };
+                CheckMeal(currentMeal);
             }
+            currentMeal = new Meal() { MealType = MealType.Lunch,MealTime = dateTimePicker1.Value.Date };
+            SessionManger.CurrentMeal = currentMeal;
+            db.Entry(currentMeal).State = EntityState.Detached;
+            db.SaveChanges();
+            Close();
+            new UserFood().ShowDialog();
+
 
             CheckMeal(currentMeal);
         }
@@ -102,24 +116,34 @@ namespace AvangersDietApp.UI
         {
             currentMeal = userMeals?.FirstOrDefault(uf => uf.Meal!.MealType == MealType.Dinner)?.Meal;
 
-            if (currentMeal == null)
+            if (currentMeal != null)
             {
-                currentMeal = new Dinner() { MealTime = DateTime.Now.Date };
+                CheckMeal(currentMeal);
             }
 
-            CheckMeal(currentMeal);
+            currentMeal = new Meal() { MealType = MealType.Dinner, MealTime = dateTimePicker1.Value.Date };
+            SessionManger.CurrentMeal = currentMeal;
+            db.Entry(currentMeal).State = EntityState.Detached;
+            db.SaveChanges();
+            Close();
+            new UserFood().ShowDialog();
         }
 
         private void btnSnack_Click(object sender, EventArgs e)
         {
             currentMeal = userMeals?.FirstOrDefault(uf => uf.Meal!.MealType == MealType.Snack)?.Meal;
 
-            if (currentMeal == null)
+            if (currentMeal != null)
             {
-                currentMeal = new Snack() { MealTime = DateTime.Now.Date };
+                CheckMeal(currentMeal);
             }
 
-            CheckMeal(currentMeal);
+            currentMeal = new Meal() { MealType = MealType.Snack, MealTime = dateTimePicker1.Value.Date };
+            SessionManger.CurrentMeal = currentMeal;
+            db.Entry(currentMeal).State = EntityState.Detached;
+            db.SaveChanges();
+            Close();
+            new UserFood().ShowDialog();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

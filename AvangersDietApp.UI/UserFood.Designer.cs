@@ -183,6 +183,18 @@
             // 
             // UserFoodDairy
             // 
+            // lblMealName
+            // 
+            lblMealName.AutoSize = true;
+            lblMealName.Font = new Font("Verdana", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblMealName.ForeColor = Color.Crimson;
+            lblMealName.Location = new Point(91, 51);
+            lblMealName.Name = "lblMealName";
+            lblMealName.Size = new Size(0, 32);
+            lblMealName.TabIndex = 10;
+            // 
+            // UserFood
+            // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.yinimodel_post_dietgreenhouseeffect_1280x720_min2;
