@@ -10,36 +10,36 @@ using System.Threading.Tasks;
 
 namespace AvangersDietApp.BLL.Concrate
 {
-    public class UserManager : IRepository<User>
+    public class IngredientManager : IRepository<Ingredient>
     {
         AvangersContext avangersContext = new AvangersContext();
 
-        public void Add(User entity)
+        public void Add(Ingredient entity)
         {
             avangersContext.Add(entity);
             avangersContext.SaveChanges();
         }
 
-        public void Delete(User entity)
+        public void Delete(Ingredient entity)
         {
             avangersContext.Remove(entity);
             avangersContext.SaveChanges();
         }
 
-        public User Get(Expression<Func<User, bool>> filter)
+        public Ingredient Get(Expression<Func<Ingredient, bool>> filter)
         {
-            return avangersContext.Set<User>().SingleOrDefault(filter);
+            return avangersContext.Set<Ingredient>().SingleOrDefault(filter);
             throw new NotImplementedException();
         }
 
-        public List<User> GetAll(Expression<Func<User, bool>> filter = null)
+        public List<Ingredient> GetAll(Expression<Func<Ingredient, bool>> filter = null)
         {
-            return filter == null ? avangersContext.Set<User>().ToList() : avangersContext.Set<User>().Where(filter).ToList();
+            return filter==null ? avangersContext.Set<Ingredient>().ToList() : avangersContext.Set<Ingredient>().Where(filter).ToList();
         }
 
-        public void Update(User entity)
+        public void Update(Ingredient entity)
         {
-            avangersContext.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            avangersContext.Entry(entity).State =Microsoft.EntityFrameworkCore.EntityState.Modified;
             avangersContext.SaveChanges();
         }
     }

@@ -18,6 +18,5 @@ namespace AvangersDietApp.DAL.Concrate
         {
             return CategoryName;
         }
-
     }
 }

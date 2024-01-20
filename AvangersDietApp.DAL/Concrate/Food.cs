@@ -19,11 +19,10 @@ namespace AvangersDietApp.DAL.Concrate
         public double Calories { get; set; }
         public byte[]? Image { get; set; }
 
-
         public Category Category { get; set; } = null!;
 
         public List<UserMealFood> UserMealFoods { get; set; } = new();
-      
+
 
         public override string ToString()
         {

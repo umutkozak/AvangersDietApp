@@ -8,21 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AvangersDietApp.DAL.SeedData;
-using AvangersDietApp.DAL.SubClasses;
+using System.Collections;
+using System.Reflection;
 
 namespace AvangersDietApp.DAL.Context
 {
     public class AvangersContext: DbContext
     {
-        public DbSet<Breakfast> Breakfasts { get; set; }
-        public DbSet<Lunch> Lunchs { get; set; }
-        public DbSet<Dinner> Dinners { get; set; }
-        public DbSet<Snack> Snacks { get; set; }
         public DbSet<Admin> Admin { get; set; }
         public DbSet<Category> Category { get; set; }
-        public DbSet<Food> Food { get; set; }   
-        public DbSet<FoodStrategy> FoodStrategy { get; set; }        
-        public DbSet<Meal> Meals { get; set; }  
+        public DbSet<Food> Food { get; set; }
+        public DbSet<FoodStrategy> FoodStrategy { get; set; }
+        public DbSet<Meal> Meals { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserMealFood> UserMealFoods { get; set; }
 
@@ -34,7 +31,7 @@ namespace AvangersDietApp.DAL.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<UserMealFood>().HasKey(uf => new { uf.UserId, uf.MealId, uf.FoodId});
+            modelBuilder.Entity<UserMealFood>().HasKey(uf => new { uf.UserId, uf.MealId, uf.FoodId });
 
             modelBuilder.Entity<UserMealFood>()
                 .HasOne(uf => uf.User)
@@ -67,6 +64,5 @@ namespace AvangersDietApp.DAL.Context
               new Category() { Id = 9, CategoryName = "Çerez ve Kuru Yemiş" });
 
         }
-
     }
 }

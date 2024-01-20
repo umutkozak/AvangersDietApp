@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AvangersDietApp.DAL.Concrate
 {
-    public class Meal : BaseEntity
+    public class Meal: BaseEntity
     {
         public int UserId { get; set; }
 
@@ -22,6 +22,6 @@ namespace AvangersDietApp.DAL.Concrate
 
         public List<UserMealFood> UserMealFoods { get; set; } = new();
 
-    }
 
+    }
 }
