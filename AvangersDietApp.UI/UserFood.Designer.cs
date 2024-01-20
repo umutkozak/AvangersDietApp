@@ -174,6 +174,7 @@
             // lblMealName
             // 
             lblMealName.AutoSize = true;
+            lblMealName.BackColor = Color.Transparent;
             lblMealName.Font = new Font("Verdana", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
             lblMealName.ForeColor = Color.Crimson;
             lblMealName.Location = new Point(91, 51);
