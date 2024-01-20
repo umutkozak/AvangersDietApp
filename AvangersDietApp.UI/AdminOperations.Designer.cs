@@ -310,12 +310,18 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.arasayfalar;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(935, 520);
+            BackgroundImage = Properties.Resources.black_1072366_12803;
+            ClientSize = new Size(818, 390);
             Controls.Add(btn_Reports);
             Controls.Add(btnFoodDelUpd);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            DoubleBuffered = true;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AdminOperations";
             Text = "AdminOperations";
             Load += AdminOperations_Load;

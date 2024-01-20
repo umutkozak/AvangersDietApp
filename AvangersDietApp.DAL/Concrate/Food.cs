@@ -9,6 +9,7 @@ namespace AvangersDietApp.DAL.Concrate
 {
     public class Food: BaseEntity
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public int CategoryId { get; set; }
         public string? Description { get; set; }
@@ -18,11 +19,11 @@ namespace AvangersDietApp.DAL.Concrate
         public double Calories { get; set; }
         public byte[]? Image { get; set; }
 
+
         public Category Category { get; set; } = null!;
 
         public List<UserMealFood> UserMealFoods { get; set; } = new();
-
-
+      
 
         public override string ToString()
         {

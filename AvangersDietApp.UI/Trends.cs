@@ -1,5 +1,6 @@
 ﻿using AvangersDietApp.DAL.Concrate;
 using AvangersDietApp.DAL.Context;
+using AvangersDietApp.DAL.Contract;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -47,8 +48,8 @@ namespace AvangersDietApp.UI
         {
             var foodList = db.UserMealFoods.Include(uf => uf.Food).GroupBy(x => x.FoodId).OrderByDescending(x => x.Count()).Take(5).Select(uf => new
             {
-                Name = uf.FirstOrDefault()!.Food!.Name,
-                NumberOfFoods = uf.Count()
+                YemekAdi = uf.FirstOrDefault()!.Food!.Name,
+                YenmeSayisi = uf.Count()
             });
 
             foreach (var food in foodList)
@@ -87,13 +88,13 @@ namespace AvangersDietApp.UI
         }
 
 
-        private List<UserMealFood> FindUserMealFood(string mealName, int option, int reportType)
+        private List<UserMealFood> FindUserMealFood(MealType mealType, int option, int reportType)
         {
             int dayNo = reportType == 0 ? -(int)DateTime.Now.DayOfWeek : -DateTime.Now.Day;
 
             if (option == 0)
             {
-                return currentUser.UserMealFoods.Where(x => x.Meal!.Name == mealName).Where(x => x.Meal!.MealTime > DateTime.Now.AddDays(dayNo) && x.Meal.MealTime <= DateTime.Now).ToList();
+                return currentUser.UserMealFoods.Where(x => x.Meal!.MealType == mealType).Where(x => x.Meal!.MealTime > DateTime.Now.AddDays(dayNo) && x.Meal.MealTime <= DateTime.Now).ToList();
             }
             else
             {
@@ -101,7 +102,7 @@ namespace AvangersDietApp.UI
 
                 foreach (User user in db.Users.Include(u => u.UserMealFoods).ThenInclude(uf => uf.Meal))
                 {
-                    ufs.AddRange(user.UserMealFoods.Where(x => x.Meal!.Name == mealName).Where(x => x.Meal!.MealTime > DateTime.Now.AddDays(dayNo) && x.Meal.MealTime.Day <= DateTime.Now.Day).ToList());
+                    ufs.AddRange(user.UserMealFoods.Where(x => x.Meal!.MealType == mealType).Where(x => x.Meal!.MealTime > DateTime.Now.AddDays(dayNo) && x.Meal.MealTime.Day <= DateTime.Now.Day).ToList());
                 }
 
                 return ufs;
@@ -109,18 +110,18 @@ namespace AvangersDietApp.UI
         }
         private void AllUserFoods(int reportType)
         {
-            lblAllUserBreakfast.Text = FindFoodName(FindFoodId(FindUserMealFood("Kahvaltı", 1, reportType)));
-            lblAllUserLunch.Text = FindFoodName(FindFoodId(FindUserMealFood("Öğle Yemeği", 1, reportType)));
-            lblAllUserDinner.Text = FindFoodName(FindFoodId(FindUserMealFood("Akşam Yemeği", 1, reportType)));
-            lblAllUserSnack.Text = FindFoodName(FindFoodId(FindUserMealFood("Ara Öğün", 1, reportType)));
+            lblAllUserBreakfast.Text = FindFoodName(FindFoodId(FindUserMealFood(MealType.BreakFast, 1, reportType)));
+            lblAllUserLunch.Text = FindFoodName(FindFoodId(FindUserMealFood(MealType.Lunch, 1, reportType)));
+            lblAllUserDinner.Text = FindFoodName(FindFoodId(FindUserMealFood(MealType.Dinner, 1, reportType)));
+            lblAllUserSnack.Text = FindFoodName(FindFoodId(FindUserMealFood(MealType.Snack, 1, reportType)));
         }
 
         private void UserFoods(int reportType)
         {
-            lblCurrentUserBreakfast.Text = FindFoodName(FindFoodId(FindUserMealFood("Kahvaltı", 0, reportType)));
-            lblCurrentUserLunch.Text = FindFoodName(FindFoodId(FindUserMealFood("Öğle Yemeği", 0, reportType)));
-            lblCurrentUserDinner.Text = FindFoodName(FindFoodId(FindUserMealFood("Akşam Yemeği", 0, reportType)));
-            lblCurrentUserSnack.Text = FindFoodName(FindFoodId(FindUserMealFood("Ara Öğün", 0, reportType)));
+            lblCurrentUserBreakfast.Text = FindFoodName(FindFoodId(FindUserMealFood(MealType.BreakFast, 0, reportType)));
+            lblCurrentUserLunch.Text = FindFoodName(FindFoodId(FindUserMealFood(MealType.Lunch, 0, reportType)));
+            lblCurrentUserDinner.Text = FindFoodName(FindFoodId(FindUserMealFood(MealType.Dinner, 0, reportType)));
+            lblCurrentUserSnack.Text = FindFoodName(FindFoodId(FindUserMealFood(MealType.Snack, 0, reportType)));
         }
 
         private void btnMothly_Click(object sender, EventArgs e)

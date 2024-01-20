@@ -8,6 +8,6 @@ namespace AvangersDietApp.DAL.Abstract
 {
     public abstract class BaseEntity
     {
-        public int Id { get; set; }
+        public  int Id { get; set; }
     }
 }

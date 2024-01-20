@@ -118,25 +118,183 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+
+  <data name="Blue Green Grey Chiropractic Logo  (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue Green Grey Chiropractic Logo  (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+
+  <data name="button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blue Green Grey Chiropractic Logo  (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue Green Grey Chiropractic Logo  (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="christmas-dinner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\christmas-dinner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="top-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\top-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arasayfalar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arasayfalar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="black-1072366_12802" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black-1072366_1280.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="black-1072366_12802" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black-1072366_1280.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="snacks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\snacks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+
   </data>
   <data name="english-breakfast" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\english-breakfast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="snacks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snacks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LogınForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogınForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Daire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Daire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blue Green Grey Chiropractic Logo  (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue Green Grey Chiropractic Logo  (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lunch-time" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lunch-time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="button2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="meal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\meal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="snacks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snacks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black-1072366_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black-1072366_1280.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arasayfalar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arasayfalar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="meal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\meal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Daire2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Daire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black-1072366_12803" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black-1072366_1280.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yinimodel_post_dietgreenhouseeffect-1280x720-min1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yinimodel_post_dietgreenhouseeffect-1280x720-min2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+
+  <data name="button2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black-1072366_12801" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black-1072366_1280.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="top-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\top-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu-3168414_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu-3168414_1280.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barchart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barchart11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu-3206749_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu-3206749_1280.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="english-breakfast" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\english-breakfast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Daire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Daire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Daire1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Daire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yinimodel_post_dietgreenhouseeffect-1280x720-min2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yinimodel_post_dietgreenhouseeffect-1280x720-min3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blue Green Grey Chiropractic Logo  (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue Green Grey Chiropractic Logo  (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Daire2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Daire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yinimodel_post_dietgreenhouseeffect-1280x720-min2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yinimodel_post_dietgreenhouseeffect-1280x720-min3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blue Green Grey Chiropractic Logo  (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue Green Grey Chiropractic Logo  (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lunch-time" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lunch-time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="top-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\top-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+
+  <data name="indir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indir.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+
+  </data>
+  <data name="menu-3168414_12801" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu-3168414_1280.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yinimodel_post_dietgreenhouseeffect-1280x720-min" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yinimodel_post_dietgreenhouseeffect-1280x720-min1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="christmas-dinner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\christmas-dinner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yinimodel_post_dietgreenhouseeffect-1280x720-min3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yinimodel_post_dietgreenhouseeffect-1280x720-min3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blue Green Grey Chiropractic Logo  (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue Green Grey Chiropractic Logo  (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black-1072366_12804" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black-1072366_1280.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+
+  <data name="indir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indir.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+
+  </data>
+  <data name="LogınForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogınForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arasayfalar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arasayfalar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="christmas-dinner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\christmas-dinner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Daire1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Daire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barchart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barchart11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
