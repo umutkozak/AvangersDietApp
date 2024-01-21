@@ -12,13 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AvangersDietApp.DAL.Migrations
 {
     [DbContext(typeof(AvangersContext))]
-<<<<<<<< HEAD:AvangersDietApp.DAL/Migrations/20240119185949_deneme1.Designer.cs
-    [Migration("20240119185949_deneme1")]
-    partial class deneme1
-========
-    [Migration("20240119131707_v1")]
+    [Migration("20240121141525_v1")]
     partial class v1
->>>>>>>> master:AvangersDietApp.DAL/Migrations/20240119131707_v1.Designer.cs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -693,10 +688,6 @@ namespace AvangersDietApp.DAL.Migrations
                     b.Property<double>("Calorie")
                         .HasColumnType("float");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
 
@@ -715,10 +706,6 @@ namespace AvangersDietApp.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Meals");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Meal");
-
-                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("AvangersDietApp.DAL.Concrate.User", b =>
@@ -770,12 +757,6 @@ namespace AvangersDietApp.DAL.Migrations
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
 
-<<<<<<<< HEAD:AvangersDietApp.DAL/Migrations/20240119185949_deneme1.Designer.cs
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-========
->>>>>>>> master:AvangersDietApp.DAL/Migrations/20240119131707_v1.Designer.cs
                     b.HasKey("UserId", "MealId", "FoodId");
 
                     b.HasIndex("FoodId");
@@ -783,34 +764,6 @@ namespace AvangersDietApp.DAL.Migrations
                     b.HasIndex("MealId");
 
                     b.ToTable("UserMealFoods");
-                });
-
-            modelBuilder.Entity("AvangersDietApp.DAL.SubClasses.Breakfast", b =>
-                {
-                    b.HasBaseType("AvangersDietApp.DAL.Concrate.Meal");
-
-                    b.HasDiscriminator().HasValue("Breakfast");
-                });
-
-            modelBuilder.Entity("AvangersDietApp.DAL.SubClasses.Dinner", b =>
-                {
-                    b.HasBaseType("AvangersDietApp.DAL.Concrate.Meal");
-
-                    b.HasDiscriminator().HasValue("Dinner");
-                });
-
-            modelBuilder.Entity("AvangersDietApp.DAL.SubClasses.Lunch", b =>
-                {
-                    b.HasBaseType("AvangersDietApp.DAL.Concrate.Meal");
-
-                    b.HasDiscriminator().HasValue("Lunch");
-                });
-
-            modelBuilder.Entity("AvangersDietApp.DAL.SubClasses.Snack", b =>
-                {
-                    b.HasBaseType("AvangersDietApp.DAL.Concrate.Meal");
-
-                    b.HasDiscriminator().HasValue("Snack");
                 });
 
             modelBuilder.Entity("AvangersDietApp.DAL.Concrate.Food", b =>

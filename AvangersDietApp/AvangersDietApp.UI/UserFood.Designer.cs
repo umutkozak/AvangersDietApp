@@ -72,24 +72,7 @@
             lblFoods.Name = "lblFoods";
             lblFoods.Size = new Size(91, 18);
             lblFoods.TabIndex = 0;
-            lblFoods.Text = "Yemekler";
-            label2.AutoSize = true;
-            label2.Font = new Font("Verdana", 12F);
-            label2.Location = new Point(53, 189);
-            label2.Name = "label2";
-            label2.Size = new Size(77, 18);
-            label2.TabIndex = 0;
-            label2.Text = "Kategori";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Verdana", 12F);
-            label3.Location = new Point(53, 237);
-            label3.Name = "label3";
-            label3.Size = new Size(83, 18);
-            label3.TabIndex = 0;
-            label3.Text = "Yemekler";
+            lblFoods.Text = "Yemekler";        
             // 
             // label5
             // 
@@ -228,7 +211,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.yinimodel_post_dietgreenhouseeffect_1280x720_min2;
+          
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(800, 450);
             Controls.Add(lblMealName);
@@ -248,7 +231,7 @@
             Text = "UserFoodDairy";
             FormClosed += UserFoodDairy_FormClosed;
 
-            Load += UserFoodDairy_Load;
+          
 
             ((System.ComponentModel.ISupportInitialize)dgv_Choosed).EndInit();
             ((System.ComponentModel.ISupportInitialize)nud_Count).EndInit();

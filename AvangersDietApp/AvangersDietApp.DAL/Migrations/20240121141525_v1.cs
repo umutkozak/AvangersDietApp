@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AvangersDietApp.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class deneme1 : Migration
+    public partial class v1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -65,8 +65,7 @@ namespace AvangersDietApp.DAL.Migrations
                     MealId = table.Column<int>(type: "int", nullable: false),
                     FoodId = table.Column<int>(type: "int", nullable: false),
                     MealTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Calorie = table.Column<double>(type: "float", nullable: false),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Calorie = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -130,8 +129,7 @@ namespace AvangersDietApp.DAL.Migrations
                 {
                     UserId = table.Column<int>(type: "int", nullable: false),
                     MealId = table.Column<int>(type: "int", nullable: false),
-                    FoodId = table.Column<int>(type: "int", nullable: false),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                    FoodId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
